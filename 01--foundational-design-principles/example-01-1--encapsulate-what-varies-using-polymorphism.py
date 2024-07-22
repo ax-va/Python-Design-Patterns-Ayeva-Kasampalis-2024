@@ -1,5 +1,11 @@
 """
-Isolate the parts of your code that are most likely to change and encapsulate them.
+Encapsulate what varies = Isolate the parts of your code that are most likely to change and encapsulate them.
+
+Advantages:
+- Ease of maintenance:      Reducing the risk of introducing bugs when only modifying the encapsulated parts
+- Enhanced flexibility:     Provide a more adaptable architecture when changing encapsulated components
+- Improved readability:     Code becomes more organized and easier to understand
+
 Polymorphism allows instances of different classes to be treated as instances of a common superclass.
 """
 
