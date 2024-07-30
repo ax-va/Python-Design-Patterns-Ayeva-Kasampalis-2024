@@ -2,7 +2,7 @@
 Encapsulate what varies = Isolate the parts of your code that are most likely to change and encapsulate them.
 
 Advantages:
-- Ease of maintenance:      Reducing the risk of introducing bugs when only modifying the encapsulated parts
+- Ease of maintenance:      Reduce the risk of introducing bugs when only modifying the encapsulated parts
 - Enhanced flexibility:     Provide a more adaptable architecture when changing encapsulated components
 - Improved readability:     Code becomes more organized and easier to understand
 
