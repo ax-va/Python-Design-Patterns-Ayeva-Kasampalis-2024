@@ -50,4 +50,6 @@ def log_message(logger: Logger, message: str):
 
 if __name__ == "__main__":
     log_message(ConsoleLogger(), "A console log.")
+    # Console: A console log.
     log_message(FileLogger(), "A file log.")
+    # log.txt: File: A file log.
