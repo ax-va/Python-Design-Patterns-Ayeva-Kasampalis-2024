@@ -5,7 +5,7 @@ and that job should be encapsulated within that class.
 """
 
 
-# example without SRP
+# - Anti-example non-holding SRP
 class Report:
     """
     Anti-example:
@@ -13,7 +13,6 @@ class Report:
     1. generating a report;
     2. saving the report's content to a file.
     """
-
     def __init__(self, content):
         self.content = content
 
@@ -25,14 +24,11 @@ class Report:
             file.write(self.content)
 
 
-# example with SRP:
+# - Example holding SRP:
 # Separate responsibilities in two different classes,
-# each with only one responsibility.
+# each of which is with only one responsibility.
 class Report:
-    """
-    Is responsible for generating the report's content.
-    """
-
+    """ Is responsible for generating the report's content. """
     def __init__(self, content):
         self.content = content
 
@@ -41,10 +37,7 @@ class Report:
 
 
 class ReportSaver:
-    """
-    Is responsible saving the report's content to a file.
-    """
-
+    """ Is responsible saving the report's content to a file. """
     def __init__(self, report: Report):
         self.report: Report = report
 
@@ -57,6 +50,7 @@ if __name__ == "__main__":
     report_content = "This is the content."
     report = Report(report_content)
     report.generate()
+    # Report generated: This is the content.
 
     report_saver = ReportSaver(report)
     report_saver.save_to_file("report.txt")
