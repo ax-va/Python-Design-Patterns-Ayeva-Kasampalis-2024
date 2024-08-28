@@ -5,7 +5,7 @@ and that job should be encapsulated within that class.
 """
 
 
-# - Anti-example non-holding SRP
+# - Anti-example with no SRP
 class Report:
     """
     Anti-example:
@@ -24,7 +24,7 @@ class Report:
             file.write(self.content)
 
 
-# - Example holding SRP:
+# - Example with SRP:
 # Separate responsibilities in two different classes,
 # each of which is with only one responsibility.
 class Report:

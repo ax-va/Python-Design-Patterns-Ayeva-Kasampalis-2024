@@ -1,12 +1,12 @@
 """
 Open-closed principle (OCP) =
-Software entities, such as classes and modules,
-should be open for extension (through inheritance or interfaces to
-accommodate new requirements and behaviors) but closed for modification.
+Software entities, such as classes and modules, should be open
+for extension (through inheritance or interfaces to accommodate
+new requirements and behaviors) but closed for modification.
 """
 
 
-# - Anti-example non-holding OCP
+# - Anti-example with no OCP
 class Rectangle:
     """
     Anti-example:
@@ -22,7 +22,7 @@ def calculate_area(shape) -> float:
         return shape.width * shape.height
 
 
-# - Example holding OCP
+# - Example with OCP
 import math
 from typing import Protocol
 

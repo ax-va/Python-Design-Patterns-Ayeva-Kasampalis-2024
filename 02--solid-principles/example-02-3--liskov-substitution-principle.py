@@ -5,7 +5,7 @@ with objects of a subclass should not change the correctness and expected behavi
 """
 
 
-# - Anti-example non-holding LSP
+# - Anti-example with no LSP
 class Bird:
     def fly(self):
         print("I can fly")
@@ -21,7 +21,7 @@ def make_bird_fly(bird):
     bird.fly()
 
 
-# - Example holding LSP
+# - Example with LSP
 class Bird:
     def move(self):
         print("I'm moving")
