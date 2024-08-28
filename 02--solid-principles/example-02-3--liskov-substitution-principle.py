@@ -1,5 +1,5 @@
 """
-Liskov substitution principle (LSP) =
+*Liskov substitution principle* (LSP) =
 If a program uses objects of a superclass, then the substitution of them
 with objects of a subclass should not change the correctness and expected behavior of the program.
 """

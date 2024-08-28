@@ -1,5 +1,5 @@
 """
-Single responsibility principle (SRP) =
+*Single responsibility principle* (SRP) =
 Each class should have one job or responsibility,
 and that job should be encapsulated within that class.
 """
