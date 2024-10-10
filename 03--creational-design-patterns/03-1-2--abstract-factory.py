@@ -6,14 +6,14 @@ Possible benefits:
 - decoupling object creation from object usage
 - potential to improve the memory usage and performance of application
 
-Factories typically come in two forms:
+Two forms of factories:
 
-- the factory method = in Python, a function that returns a different object per input parameter
+1. the factory method = in Python, a function that returns a different object per input parameter
 ->
 the main critique in Python: over-engineered or unnecessarily complex
 
-- the abstract factory = group of factory methods, where each factory method is responsible for
-generating a different kind of object
+2. the abstract factory = group of factory methods,
+where each factory method is responsible for generating a different kind of object
 """
 
 # Example:
