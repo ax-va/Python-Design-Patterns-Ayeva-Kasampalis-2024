@@ -2,15 +2,19 @@
 In the factory design pattern, a client (meaning client code) asks for an object
 without knowing where the object is coming from (that is, which class is used to generate it).
 ->
-It is easier to track which objects are created if this is done through a central function,
-compared to letting a client create objects using a direct class instantiation.
+Possible benefits:
+- easier tracking an object creation
+- decoupling object creation from object usage
+- potential to improve the memory usage and performance of application
 
 Factories typically come in two forms:
 
 - the factory method = in Python, a function that returns a different object per input parameter
--> the main critique in Python: over-engineered or unnecessarily complex
+->
+the main critique in Python: over-engineered or unnecessarily complex
 
-- the abstract factory = group of factory methods
+- the abstract factory = group of factory methods, where each factory method is responsible for
+generating a different kind of object
 """
 import json
 import xml.etree.ElementTree as ET
