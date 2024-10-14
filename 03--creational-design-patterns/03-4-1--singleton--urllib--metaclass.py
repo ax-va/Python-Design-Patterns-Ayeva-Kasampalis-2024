@@ -9,7 +9,7 @@ from different parts of the application or by different users and do its work
 (for example, the class at the core of a logging system or utility).
 
 Notation:
-In the Python programmer community, the singleton pattern is actually considered an anti-pattern.
+In the Python programmer community, the singleton pattern is actually considered an *anti-pattern*.
 In Python, developers often prefer a simpler alternative to singleton: using a module-level global object.
 For this see `03-4-2*`.
 
