@@ -83,12 +83,10 @@ class Waiter:
 
 	@property
 	def steps(self):
-		return [
-			self.builder.prepare_dough,
-			self.builder.add_sauce,
-			self.builder.add_topping,
-			self.builder.bake,
-		]
+		return [self.builder.prepare_dough,
+				self.builder.add_sauce,
+				self.builder.add_topping,
+				self.builder.bake,]
 
 	@property
 	def pizza(self):
