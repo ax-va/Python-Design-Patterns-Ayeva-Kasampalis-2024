@@ -15,7 +15,7 @@ See `03-4-2*`.
 
 See also:
 - The Global Object Pattern
-https://python-patterns.guide/python/module-globals/
+https://python-patterns.guide/python/module-globals
 """
 import urllib.request
 
