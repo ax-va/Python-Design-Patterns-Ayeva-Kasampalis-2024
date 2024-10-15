@@ -56,15 +56,15 @@ def main():
 	]
 
 	print(URLFetcher() is URLFetcher())
-	# True
 
 	fetcher = URLFetcher()
 	for url in my_urls:
 		fetcher.fetch(url)
 
 	print(f"Fetched URLs: {fetcher.urls}")
-	# Fetched URLs: ['http://python.org', 'https://www.djangoproject.com/']
 
 
 if __name__ == "__main__":
 	main()
+	# True
+	# Fetched URLs: ['http://python.org', 'https://www.djangoproject.com/']
