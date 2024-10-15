@@ -11,7 +11,7 @@ from different parts of the application or by different users and do its work
 Notation:
 In the Python programmer community, the singleton pattern is actually considered an *anti-pattern*.
 In Python, developers often prefer a simpler alternative to singleton: using a module-level global object.
-For this see `03-4-2*`.
+See the `alternative-to-singleton` directory where it is used.
 
 See also:
 - The Global Object Pattern
