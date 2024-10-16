@@ -2,8 +2,8 @@
 
 Creational design pattens (from the Gang of Four):
 
-- factory
-- builder
-- prototype
-- singleton
-- object pool
+- factories
+- builders
+- prototypes
+- singletons
+- object pools
