@@ -22,6 +22,7 @@ class LazyProperty:
 		print(f"Function overridden: {self.method}")
 		print(f"Function's name: {self.method_name}")
 
+	# descriptor method
 	def __get__(self, obj, cls):
 		# Handle the case where the descriptor is accessed
 		# through the class itself like `Test.resource`,
