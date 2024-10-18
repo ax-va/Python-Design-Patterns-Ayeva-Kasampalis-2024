@@ -7,4 +7,4 @@ A *structural design pattern* (from the Gang of Four) proposes a way of composin
 - bridges
 - facades
 - flyweights
-- proxies
+- proxies (virtual proxies, protection/protective proxies, remote proxies, smart proxies)

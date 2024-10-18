@@ -2,7 +2,7 @@
 
 Creational design pattens (from the Gang of Four):
 
-- factories
+- factories (factory methods, abstract factories)
 
 In the *factory* design pattern, a client creates an object without knowing how (by which class) the object is created.
 
