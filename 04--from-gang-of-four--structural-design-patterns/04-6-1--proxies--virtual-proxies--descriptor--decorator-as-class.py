@@ -14,7 +14,7 @@ examples: reference counting and thread-safety checks.
 """
 
 
-# A `LazyProperty` class acts as a descriptor and decorator to implement lazy loading of properties
+# A `LazyProperty` class is a decorator and acts as a descriptor to implement lazy loading of properties
 class LazyProperty:
 	def __init__(self, method):
 		self.method = method
