@@ -1,8 +1,8 @@
 """
 The proxy design pattern contains:
 
-- a *virtual proxy*, which uses *lazy initialization* to defer the creation of a computationally expensive object
-until the moment it is actually needed;
+- a *virtual proxy*, which uses *lazy initialization* to defer
+the creation of a computationally expensive object until the moment it is actually needed;
 
 - a *protection/protective proxy*, which controls access to a sensitive object;
 
