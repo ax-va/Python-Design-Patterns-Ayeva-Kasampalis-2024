@@ -1,6 +1,8 @@
 """
 While the **adapter pattern** is used *later* to make unrelated classes work together,
 the **bridge pattern** is designed *up-front* to decouple an implementation from its abstraction.
+This means the bridge pattern is used *up-front* to define an abstraction and its implementation
+in a decoupled way so that both can vary independently.
 
 In the bridge pattern, the following special components are defined:
 - an abstraction that applies to all the classes;
@@ -12,15 +14,15 @@ from typing import Protocol
 
 # Example:
 # building an application where the user is going to manage
-# and deliver content # after fetching it from diverse sources,
+# and deliver content after fetching it from diverse sources,
 # which could be the following:
 # - a web page (based on its URL),
 # - a resource accessed on an FTP server,
 # - a file on the local filesystem,
 # - a database server.
 # ->
-# Define an abstraction for the Resource Content and a separate interface
-# for the objects that are responsible for fetching the content.
+# Define an interface for the abstraction,
+# an interface for the implementor, and two implementations.
 
 # This class is called the Implementor
 class ResourceContentFetcher(Protocol):
