@@ -30,13 +30,13 @@ a large number of computationally expensive objects that share many properties.
 
 The *proxy* pattern contains:
 
-1. a *virtual proxy*, which uses *lazy initialization* to defer
+1) a *virtual proxy*, which uses *lazy initialization* to defer
 the creation of a computationally expensive object until the moment it is actually needed;
 
-2. a *protection/protective proxy*, which controls access to a sensitive object;
+2) a *protection/protective proxy*, which controls access to a sensitive object;
 
-3. a *remote proxy*, which acts as the local representation of an object that really exists
+3) a *remote proxy*, which acts as the local representation of an object that really exists
 in a different address space (for example, a network server); an example: an object-relational mapping (ORM) API;
 
-4. a *smart (reference) proxy*, which performs extra actions when an object is accessed;
+4) a *smart (reference) proxy*, which performs extra actions when an object is accessed;
 examples: reference counting and thread-safety checks.
