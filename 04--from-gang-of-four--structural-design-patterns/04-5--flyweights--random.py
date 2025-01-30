@@ -11,7 +11,7 @@ Requirements for effectively using the flyweight pattern:
 
 - The application needs to use a large number of objects.
 
-- There are so many objects that it’s too expensive to store/render them.
+- There are so many objects that it's too expensive to store/render them.
 Once the mutable state is removed, many groups of distinct objects can be replaced by relatively few shared objects.
 
 - Object identity is not important for the application.
