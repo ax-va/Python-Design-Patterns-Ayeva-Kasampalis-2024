@@ -8,6 +8,10 @@ because we can use a simpler code:
 service = NotificationService()
 service.sender = SmsSender()
 ```
+
+An issue is opened for this:
+https://github.com/PacktPublishing/Mastering-Python-Design-Patterns-Third-Edition/issues/9
+
 """
 from typing import Protocol
 
