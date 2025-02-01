@@ -49,7 +49,7 @@ if __name__ == "__main__":
 	email_service.notify("Hello, this is a test notification!")
 	# Sending Email: Hello, this is a test notification!
 
-	# Change the decorator's parameter and the `NotificationService`'s `sender` attribute
+	# Change the decorator's parameter and in this way the `NotificationService`'s `sender` attribute
 	sms_service = inject_sender(SmsSender)(NotificationService)()
 	sms_service.notify("Hello, this is a test notification!")
 	# Sending SMS: Hello, this is a test notification!
