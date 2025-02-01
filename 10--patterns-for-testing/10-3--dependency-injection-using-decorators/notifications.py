@@ -33,6 +33,7 @@ class SmsSender:
 		print(f"Sending SMS: {message}")
 
 
+# decorator
 def inject_sender(sender_cls):
 	def decorator(cls):  # `cls` will be `NotificationService`
 		cls.sender = sender_cls()
@@ -40,7 +41,7 @@ def inject_sender(sender_cls):
 	return decorator
 
 
-# decorator
+# Apply decorator
 @inject_sender(EmailSender)
 class NotificationService:
 	sender: NotificationSender = None
