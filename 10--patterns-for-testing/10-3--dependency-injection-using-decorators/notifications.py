@@ -4,6 +4,7 @@ allows for easy changes without modifying the class internals.
 
 But using a decorator seems to be overengineered
 because we can use a simpler code:
+
 ```python
 service = NotificationService()
 service.sender = SmsSender()
