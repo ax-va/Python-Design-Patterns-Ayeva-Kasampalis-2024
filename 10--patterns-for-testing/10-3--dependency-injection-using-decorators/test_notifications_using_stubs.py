@@ -40,7 +40,6 @@ class TestNotifService(unittest.TestCase):
 
 	def test_notify_with_sms(self):
 		sms_stub = SmsSenderStub()
-
 		# What's the point of a decorator
 		# if the `sender` method still needs to be overwritten?
 		service = inject_sender(SmsSenderStub)(NotificationService)()
