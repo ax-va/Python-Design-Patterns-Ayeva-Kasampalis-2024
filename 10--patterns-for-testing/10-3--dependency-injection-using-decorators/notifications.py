@@ -1,5 +1,13 @@
 """
-In this example, using a decorator seems to be overengineered.
+This example shows how using a decorator to manage dependencies
+allows for easy changes without modifying the class internals.
+
+But using a decorator seems to be overengineered
+because we can use a simpler code:
+```python
+service = NotificationService()
+service.sender = SmsSender()
+```
 """
 from typing import Protocol
 
@@ -20,7 +28,6 @@ class SmsSender:
 		print(f"Sending SMS: {message}")
 
 
-# Do we need a decorator in this example?
 def inject_sender(sender_cls):
 	def decorator(cls):  # `cls` will be `NotificationService`
 		cls.sender = sender_cls()
@@ -28,6 +35,7 @@ def inject_sender(sender_cls):
 	return decorator
 
 
+# decorator
 @inject_sender(EmailSender)
 class NotificationService:
 	sender: NotificationSender = None
@@ -37,11 +45,11 @@ class NotificationService:
 
 
 if __name__ == "__main__":
-	service = NotificationService()  # The class got `EmailSender` as `sender` via the decorator
-	service.notify("Hello, this is a test notification!")
+	email_service = NotificationService()  # The class got `EmailSender` as `sender` via the decorator
+	email_service.notify("Hello, this is a test notification!")
 	# Sending Email: Hello, this is a test notification!
 
-	# Isn't using a decorator overengineered?
-	service.sender = SmsSender()
-	service.notify("Hello, this is a test notification!")
+	# Change the decorator's parameter and the `NotificationService`'s `sender` attribute
+	sms_service = inject_sender(SmsSender)(NotificationService)()
+	sms_service.notify("Hello, this is a test notification!")
 	# Sending SMS: Hello, this is a test notification!

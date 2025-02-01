@@ -43,15 +43,8 @@ class TestNotifService(unittest.TestCase):
 
 		# What's the point of a decorator
 		# if the `sender` method still needs to be overwritten?
-		@inject_sender(SmsSenderStub)
-		class CustomNotificationService:
-			sender: NotificationSender = None
-
-			def notify(self, message):
-				self.sender.send(message)
-
-		service = CustomNotificationService()
-		# Overwrite `sender`
+		service = inject_sender(SmsSenderStub)(NotificationService)()
+		# Overwrite `sender` because `sms_stub` and `service.sender` are different instances of `SmsSenderStub`
 		service.sender = sms_stub
 		service.notify("Test SMS Message")
 		self.assertIn(
