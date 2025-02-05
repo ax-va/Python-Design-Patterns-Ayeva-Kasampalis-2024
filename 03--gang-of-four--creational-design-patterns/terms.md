@@ -1,6 +1,8 @@
+# The Gang of Four
+
 ## Creational Design Pattens
 
-Creational design pattens (from the Gang of Four):
+Creational design pattens:
 
 - **factories** (factory methods, abstract factories)
 
