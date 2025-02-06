@@ -4,7 +4,7 @@ Explanation of the UML class diagram for a UI event-based system:
 1. Classes:
 - `Widget` (base class)
 - `Event`
-- `MainWindow`, `MsgText`, `SendDialog` (derived classes from `Widget`)
+- `MainWindow`, `MsgText`, `SendDialog` (inheriting classes from `Widget`)
 
 2. Relationships:
 - Inheritance (triangle arrowhead)
@@ -73,11 +73,11 @@ if __name__ == "__main__":
 	msg_text = MsgText(send_dialog)
 
 	for widget in (main_window, send_dialog, msg_text):
-		for evt_name in ("down", "paint", "unhandled", "close"):
-			evt = Event(evt_name)
+		for event_name in ("down", "paint", "unhandled", "close"):
+			event = Event(event_name)
 			# Send an event to a widget
-			print(f"Sending '{evt}' to {widget.__class__.__name__}...")
-			widget.handle(evt)
+			print(f"Sending '{event}' to {widget.__class__.__name__}...")
+			widget.handle(event)
 
 # Sending 'down' to MainWindow...
 # MainWindow Default: 'down'
