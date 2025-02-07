@@ -16,7 +16,7 @@ Thus, the client only needs to know how to communicate with the start (head) of 
 - **commands**
 
 The *command* pattern is used to encapsulate an operation 
-(such as undo, redo, copy, paste, capitalize text, and so forth) as an object.
+(e.g. undo, redo, copy, paste, capitalize text, and so forth) as an object.
 
 - **observers**
 
