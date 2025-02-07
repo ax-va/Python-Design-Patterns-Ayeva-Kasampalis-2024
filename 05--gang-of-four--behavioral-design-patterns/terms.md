@@ -15,7 +15,7 @@ Thus, the client only needs to know how to communicate with the start (head) of 
 
 - **commands**
 
-The *command design* pattern is used to encapsulate an operation 
+The *command* pattern is used to encapsulate an operation 
 (such as undo, redo, copy, paste, capitalize text, and so forth) as an object.
 
 - **observers**
