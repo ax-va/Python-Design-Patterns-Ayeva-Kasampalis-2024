@@ -28,7 +28,7 @@ class CreateFile:
 			f.write(self.content)
 
 	def undo(self):
-		logging.info(f"deleting file {self.filepath}")
+		logging.info(f"[deleting file '{self.filepath}']")
 		os.remove(self.filepath)
 
 
@@ -88,7 +88,7 @@ if __name__ == "__main__":
 		try:
 			reversed_command.undo()
 		except AttributeError as e:
-			logging.error(str(e))
+			logging.error(f"[{e}]")
 
 # INFO: [creating file 'file1']
 # INFO: [reading file 'file1']
@@ -100,7 +100,7 @@ if __name__ == "__main__":
 # Reverse the executed commands? [y/n]
 # y
 
-# ERROR: 'ReadFile' object has no attribute 'undo'
+# ERROR: ['ReadFile' object has no attribute 'undo']
 # INFO: [renaming 'file2' back to 'file1']
-# ERROR: 'ReadFile' object has no attribute 'undo'
-# INFO: deleting file file1
+# ERROR: ['ReadFile' object has no attribute 'undo']
+# INFO: [deleting file `file1`]
