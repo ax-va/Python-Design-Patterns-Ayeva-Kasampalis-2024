@@ -1,5 +1,5 @@
 """
-Explanation of the UML class diagram for a UI event-based system:
+Explanation of the UML class diagram for a GUI event-based system:
 
 1. Classes:
 - `Widget` (base class)
@@ -7,15 +7,15 @@ Explanation of the UML class diagram for a UI event-based system:
 - `MainWindow`, `MsgText`, `SendDialog` (inheriting classes from `Widget`)
 
 2. Relationships:
-- Inheritance (triangle arrowhead)
+- Inheritance (triangle arrowhead from the inheriting classes to `Widget`)
 `MainWindow`, `MsgText`, and `SendDialog` inherit from `Widget`.
 
-- Association (arrow)
+- Association (simple arrow from `Widget` to `Event`)
 `Event` is associated with `Widget`, meaning `Widget` handles `Event` objects.
 
-- `Aggregation` (diamond symbol)
+- `Aggregation` (diamond symbol at `Widget` linked to `Widget` by line)
 `Widget` has a parent-child relationship with itself,
-meaning a `Widget` instance can consist of other `Widget` instances.
+meaning a `Widget` instance can contain / consist of other `Widget` instances.
 
 See also:
 - https://legacy.python.org/workshops/1997-10/proceedings/savikko.html
