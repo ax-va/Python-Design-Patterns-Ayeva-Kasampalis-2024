@@ -1,4 +1,4 @@
-# The Gang of Four
+# The Gang of Four (GoF)
 
 ## Creational Design Pattens
 
