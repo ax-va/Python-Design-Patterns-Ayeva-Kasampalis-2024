@@ -26,8 +26,8 @@ class WeatherStation:
 	def remove_observer(self, observer):
 		self.observers.remove(observer)
 
-	# notify observers
 	def set_weather_data(self, **weather_data):
+		# notify observers
 		for observer in self.observers:
 			observer.update(**weather_data)
 
