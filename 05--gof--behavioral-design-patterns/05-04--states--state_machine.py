@@ -68,7 +68,7 @@ class Process:
 		self.name = name
 
 	# The `@before` and `@after` decorators are used to execute actions
-	# before # or after a transition occurs, respectively.
+	# before or after a transition occurs, respectively.
 
 	@after("wait")
 	def wait_info(self):
