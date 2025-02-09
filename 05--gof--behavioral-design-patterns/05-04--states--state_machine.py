@@ -110,7 +110,8 @@ def current_state(process: Process):
 
 
 if __name__ == "__main__":
-	# event names for debugging
+	# Event names are useful for debugging and
+	# providing additional information.
 	RUNNING = "running"
 	WAITING = "waiting"
 	BLOCKED = "blocked"
