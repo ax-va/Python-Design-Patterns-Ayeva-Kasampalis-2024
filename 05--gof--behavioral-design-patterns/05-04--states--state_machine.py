@@ -95,14 +95,14 @@ class Process:
 		print(f"{self.name} is swapped out and blocked")
 
 
-def transition(process: Process, event: Event, next_event_name: str):
+def transition(process: Process, event: Event, event_name: str):
 	try:
 		event()
 	except InvalidStateTransition:
 		print(
 			f"Transition of {process.name} "
 			f"from {process.current_state} "
-			f"to {next_event_name} failed"
+			f"to {event_name} failed"
 		)
 
 def current_state(process: Process):
