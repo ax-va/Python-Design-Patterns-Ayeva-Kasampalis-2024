@@ -6,7 +6,7 @@ Advantages:
 - Enhanced flexibility:     Provide a more adaptable architecture when changing encapsulated components
 - Improved readability:     Code becomes more organized and easier to understand
 
-getters allow reading the values of attributes and setters enable modifying them.
+When using properties, getters allow reading the values of attributes and setters enable modifying them.
 """
 
 
