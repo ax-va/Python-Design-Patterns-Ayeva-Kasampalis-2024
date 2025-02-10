@@ -2,33 +2,33 @@
 
 ## Structural Design Patterns
 
-A *structural design pattern* proposes a way of composing objects to provide new functionality:
+A *structural design pattern* proposes a way of composing objects to provide new functionality.
 
-- **adapters**
+### Adapters
 
 The *adapter* pattern serves as a flexible solution for harmonizing mismatched interfaces.
 
-- **decorators**
+### Decorators
 
 The *decorator* pattern is used to extend the behavior of an object without using inheritance.
 
-- **bridges**
+### Bridges
 
 While the *adapter* pattern is used *later* to make unrelated classes work together,
 the *bridge* pattern is used *up-front* to define an abstraction and its implementation
 in a decoupled way so that both can vary independently.
 
-- **facades**
+### Facades
 
 The *facade* pattern is for providing a simple interface to client code 
 that wants to use a complex system but does not need to be aware of the system's complexity.
 
-- **flyweights**
+### Flyweights
 
 The *flyweight* pattern is used when an application needs to create 
 a large number of computationally expensive objects that share many properties.
 
-- **proxies** (virtual proxies, protection/protective proxies, remote proxies, smart proxies)
+### Proxies (virtual proxies, protection/protective proxies, remote proxies, smart proxies)
 
 The *proxy* pattern contains:
 
