@@ -1,3 +1,18 @@
+"""
+*Program to Interfaces, Not Implementations* =
+Code against an interface rather than a concrete class.
+
+- Benefits:
+  - Flexibility:          Easily switch between different implementations without altering the code that uses them
+  - Maintainability:      Make the code easier to update or replace components because of no specific implementations
+  - Testability:          Simpler to write unit tests, as you can easily mock the interface during testing
+
+- In Python, interfaces can be implemented using two primary techniques:
+
+    1. *Abstract base classes (ABCs)* define abstract methods that must be implemented by any concrete (i.e., non-abstract) subclass.
+    2. *Protocols* offer a more flexible approach than ABCs, known as *structural duck typing*,
+    where an object is considered valid if it has certain attributes or methods, regardless of its actual inheritance.
+"""
 from abc import ABC, abstractmethod
 
 

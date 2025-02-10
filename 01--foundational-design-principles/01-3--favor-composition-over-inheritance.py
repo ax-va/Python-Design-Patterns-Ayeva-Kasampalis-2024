@@ -1,3 +1,9 @@
+"""
+*Favor Composition Over Inheritance* =
+Prefer composing objects from simpler parts to inheriting functionalities from a base class (*composition* = "has-a" relationship).
+
+"""
+
 class Engine:
     def start(self):
         print("Engine started")
