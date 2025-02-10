@@ -1,6 +1,6 @@
 # SOLID
 
-SOLID is a set of five design principles proposed by Robert C. Martin
+SOLID is a set of five design principles proposed by Robert C. Martin.
 
 ## Single Responsibility Principle (SRP)
 
