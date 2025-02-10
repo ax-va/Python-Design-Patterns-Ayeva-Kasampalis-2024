@@ -1,15 +1,3 @@
-"""
-Encapsulate what varies = Isolate the parts of your code that are most likely to change and encapsulate them.
-
-Advantages:
-- Ease of maintenance:      Reduce the risk of introducing bugs when only modifying the encapsulated parts
-- Enhanced flexibility:     Provide a more adaptable architecture when changing encapsulated components
-- Improved readability:     Code becomes more organized and easier to understand
-
-When using properties, getters allow reading the values of attributes and setters enable modifying them.
-"""
-
-
 class Circle:
     def __init__(self, radius: int):
         self._radius: int = radius
