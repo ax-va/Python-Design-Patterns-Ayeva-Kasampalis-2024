@@ -1,4 +1,11 @@
 """
+The *chain of responsibility* pattern is used to handle requests by passing them from the sender (client) to receivers
+(processing elements, handlers) through a chain of handlers.
+Each handler decides either whether it can process the request or whether it should delegate it further along the chain.
+The client only interacts with the first processing element in the chain,
+the first one with only the second one, and so on.
+Thus, the client only needs to know how to communicate with the start (head) of the chain.
+
 Explanation of the UML class diagram for a GUI event-based system:
 
 1. Classes:

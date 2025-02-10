@@ -1,4 +1,10 @@
 """
+A *(finite) state machine* is an abstract machine with two key components, that is, states and transitions.
+A state is the current (active) status of a system.
+A transition is a switch from one state to another that is initiated by an event or condition.
+State diagrams represent state machines so that each state is a node, and each transition is an edge between two nodes.
+The *state* pattern focuses on implementing a state machine in software engineering.
+
 The *state* design pattern is usually implemented using a parent `State` class
 with the common functionality of all the states, and several concrete classes derived from `State`
 with the state-specific required functionality.

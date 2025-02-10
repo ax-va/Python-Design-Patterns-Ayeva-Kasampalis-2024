@@ -1,4 +1,7 @@
 """
+The *command* pattern is used to encapsulate an operation
+(e.g. undo, redo, copy, paste, capitalize text, and so forth) as an object.
+
 Example:
 the *command* pattern to implement the following basic file utilities:
 - creating a file and, optionally, adding text to it,
