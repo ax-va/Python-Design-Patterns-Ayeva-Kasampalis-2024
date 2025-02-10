@@ -23,7 +23,8 @@ A class should not be forced to implement interfaces it does not use.
 In the context of Python, this implies that a class shouldn't be forced 
 to inherit and implement methods that are irrelevant to its purpose.
 
-- **Dependency inversion principle** (DIP) =
+## Dependency inversion principle (DIP)
+
 High-level modules should not depend directly on low-level modules.
 Instead, both should depend on abstractions or interfaces.
 
