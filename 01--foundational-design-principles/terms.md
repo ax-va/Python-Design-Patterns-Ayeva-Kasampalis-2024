@@ -1,6 +1,6 @@
 # Foundational Design Principles
 
-## Encapsulate what varies
+## Encapsulate What Varies
 
 Isolate the parts of your code that are most likely to change and encapsulate them.
 
