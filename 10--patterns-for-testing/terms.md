@@ -1,4 +1,4 @@
-# Patterns for testing
+# Patterns for Testing
  
 ## Mock Objects
 
