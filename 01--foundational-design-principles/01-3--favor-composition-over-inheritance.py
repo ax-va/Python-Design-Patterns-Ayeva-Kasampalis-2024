@@ -1,7 +1,7 @@
 """
 *Favor Composition Over Inheritance* =
-Prefer composing objects from simpler parts to inheriting functionalities from a base class (*composition* = "has-a" relationship).
-
+Prefer composing objects from simpler parts to inheriting functionalities from a base class.
+The *composition* means a "has-a" relationship.
 """
 
 class Engine:

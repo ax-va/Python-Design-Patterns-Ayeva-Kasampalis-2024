@@ -2,7 +2,7 @@
 
 ## Creational Design Pattens
 
-### Factories (factory methods, abstract factories)
+### Factories (Factory Methods, Abstract Factories)
 
 In the *factory* design pattern, a client creates an object without knowing how (by which class) the object is created.
 

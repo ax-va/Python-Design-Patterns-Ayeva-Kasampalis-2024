@@ -18,7 +18,8 @@ Isolate the parts of your code that are most likely to change and encapsulate th
 
 ## Favor Composition Over Inheritance 
 
-Prefer composing objects from simpler parts to inheriting functionalities from a base class (*composition* = "has-a" relationship).
+Prefer composing objects from simpler parts to inheriting functionalities from a base class.
+The *composition* means a "has-a" relationship.
 
 ## Program to Interfaces, Not Implementations
 
