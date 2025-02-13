@@ -42,7 +42,7 @@ such as combat simulation, billing, visualization, configuration, and communicat
 The *interpreter* pattern is related only to internal DSLs. 
 Its goal is to create a simple but useful language using the features provided by the host programming language.
 The interpreter pattern assumes that the data already is parsed in some convenient form, 
-e.g., in an *abstract syntax tree (AST)*.
+e.g., an *abstract syntax tree (AST)*.
 
 ### Strategies
 
