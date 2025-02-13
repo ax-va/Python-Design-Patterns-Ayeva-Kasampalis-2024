@@ -7,7 +7,8 @@ Its goal is to create a simple but useful language using the features provided b
 The interpreter pattern assumes that the data already is parsed in some convenient form,
 e.g., in an *abstract syntax tree (AST)*.
 
-We create an internal DSL to control a smart house with sentences of the form:
+Example:
+Create an internal DSL to control a smart house with sentences of the form:
 ```
 <command> -> <receiver> -> <arguments>
 ```
