@@ -1,7 +1,5 @@
 """
-The object pool pattern =
-Reusing existing objects instead of creating new ones when they are needed.
-->
+The *object pool* pattern is used to reuse existing objects instead of creating new ones when they are needed.
 This is useful when resource initialization is costly or time-consuming.
 """
 # Example: a car rental application

@@ -1,7 +1,7 @@
 """
-The flyweight design pattern =
-Minimizing memory usage and improving performance by
-introducing data sharing between similar objects.
+The *flyweight* pattern is used when an application needs to create
+a large number of computationally expensive objects that share many properties.
+Thus, we minimize memory usage and improve performance by introducing data sharing between similar objects.
 
 A flyweight is a shared object that contains state-independent, immutable (also known as *intrinsic*) data.
 The state-dependent, mutable (also known as *extrinsic*) data should not be part of

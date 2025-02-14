@@ -1,8 +1,8 @@
 """
-The adapter pattern is a structural design pattern to make two incompatible interfaces compatible.
-For example, to adapt an old system component to a new system component or vice versa.
+The *adapter* pattern is a structural design pattern to make two incompatible interfaces compatible.
+An example may be adapting an old system component to a new system component or vice versa.
 
-- Consider adapting several classes into a unified interface.
+Example: Consider adapting several classes into a unified interface.
 """
 
 # The `organize_performance` method is the main action that `Club` can perform

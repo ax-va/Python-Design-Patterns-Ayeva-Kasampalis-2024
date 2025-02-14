@@ -7,10 +7,13 @@ A *structural design pattern* proposes a way of composing objects to provide new
 ### Adapters
 
 The *adapter* pattern serves as a flexible solution for harmonizing mismatched interfaces.
+An example may be adapting an old system component to a new system component or vice versa.
 
 ### Decorators
 
 The *decorator* pattern is used to extend the behavior of an object without using inheritance.
+We can add responsibilities to an object dynamically, and in a transparent manner (without affecting other objects).
+Python decorators can actually do much more than the decorator pattern.
 
 ### Bridges
 
@@ -22,11 +25,17 @@ in a decoupled way so that both can vary independently.
 
 The *facade* pattern is for providing a simple interface to client code 
 that wants to use a complex system but does not need to be aware of the system's complexity.
+We can hide the internal complexity of our systems and exposing only
+what is necessary to the client through a simplified interface.
 
 ### Flyweights
 
 The *flyweight* pattern is used when an application needs to create 
 a large number of computationally expensive objects that share many properties.
+Thus, we minimize memory usage and improve performance by introducing data sharing between similar objects.
+A flyweight is a shared object that contains state-independent, immutable (also known as *intrinsic*) data.
+The state-dependent, mutable (also known as *extrinsic*) data should not be part of
+flyweight because this is information that cannot be shared, since it differs per object.
 
 ### Proxies (virtual proxies, protection/protective proxies, remote proxies, smart proxies)
 

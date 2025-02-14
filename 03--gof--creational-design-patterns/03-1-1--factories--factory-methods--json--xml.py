@@ -6,14 +6,13 @@ Possible benefits:
 - decoupling object creation from object usage
 - potential to improve the memory usage and performance of application
 
-Two forms of factories:
+There are two forms of factories:
 
-1. the factory method = in Python, a function that returns a different object per input parameter
-->
-the main critique in Python: over-engineered or unnecessarily complex
+- The *factory method* that is, in Python, a function that returns a different object per input parameter
+but is considered in Python as over-engineered or unnecessarily complex.
 
-2. the abstract factory = group of factory methods,
-where each factory method is responsible for generating a different kind of object
+- The *abstract factory* that is a group of factory methods,
+where each factory method is responsible for generating a different kind of object.
 """
 import json
 import xml.etree.ElementTree as ET

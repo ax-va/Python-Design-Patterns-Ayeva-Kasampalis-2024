@@ -1,7 +1,6 @@
 """
-The decorator pattern =
-Adding responsibilities to an object dynamically, and
-in a transparent manner (without affecting other objects).
+The *decorator* pattern is used to extend the behavior of an object without using inheritance.
+We can add responsibilities to an object dynamically, and in a transparent manner (without affecting other objects).
 
 Note:
 The decorator pattern is a built-in feature in Python.
