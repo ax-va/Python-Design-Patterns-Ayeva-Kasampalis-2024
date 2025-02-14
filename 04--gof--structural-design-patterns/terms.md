@@ -37,7 +37,7 @@ A flyweight is a shared object that contains state-independent, immutable (also 
 The state-dependent, mutable (also known as *extrinsic*) data should not be part of
 flyweight because this is information that cannot be shared, since it differs per object.
 
-### Proxies (virtual proxies, protection/protective proxies, remote proxies, smart proxies)
+### Proxies (Virtual Proxies, Protection/Protective Proxies, Remote Proxies, Smart Proxies)
 
 The *proxy* pattern contains:
 
