@@ -9,7 +9,7 @@ In this design pattern, the following definitions are used:
 In this example, we use the pickle module that can transform a complex object into a byte stream, and vice versa:
 https://docs.python.org/3/library/pickle.html
 
-Notice:
+Warning:
 The pickle module is not secure. Only unpickle data you trust.
 """
 import pickle
