@@ -10,7 +10,8 @@ In this example, we use the pickle module that can transform a complex object in
 https://docs.python.org/3/library/pickle.html
 
 Warning:
-The pickle module is not secure. Only unpickle data you trust.
+The pickle module is not secure.
+Only unpickle data you trust.
 """
 import pickle
 
