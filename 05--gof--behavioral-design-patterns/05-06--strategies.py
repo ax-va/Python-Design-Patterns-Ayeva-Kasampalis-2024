@@ -1,5 +1,5 @@
 """
-The *strategy* pattern promotes using multiple algorithms to solve a problem.
+The *Strategy* pattern promotes using multiple algorithms to solve a problem.
 It makes it possible to switch algorithms at runtime transparently that is,
 the client code is unaware of the change.
 Normally, the strategy should not be picked by the user.

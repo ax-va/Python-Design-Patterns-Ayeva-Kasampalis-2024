@@ -2,7 +2,8 @@
 A *(domain-specific language) DSL* is a computer language of limited expressiveness targeting a particular domain,
 such as combat simulation, billing, visualization, configuration, and communication protocols.
 *Internal DSLs* are built on top of a host programming language, which is Python in our case.
-The *interpreter* pattern is related only to internal DSLs.
+
+The *Interpreter* pattern is related only to internal DSLs.
 Its goal is to create a simple but useful language using the features provided by the host programming language.
 The interpreter pattern assumes that the data already is parsed in some convenient form,
 e.g., in an *abstract syntax tree (AST)*.

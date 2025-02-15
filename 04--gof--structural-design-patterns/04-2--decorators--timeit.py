@@ -1,14 +1,14 @@
 """
-The *decorator* pattern is used to extend the behavior of an object without using inheritance.
+The *Decorator* pattern is used to extend the behavior of an object without using inheritance.
 We can add responsibilities to an object dynamically, and in a transparent manner (without affecting other objects).
 
 Note:
-The decorator pattern is a built-in feature in Python.
+The Decorator pattern is a built-in feature in Python.
 Python decorators can actually do much more than the decorator pattern.
 A decorated function in Python cannot be undecorated, but using another decorator wrapper
 you can still decide at runtime whether the decorator will be executed or not.
 
-The decorator pattern shines when used for implementing *cross-cutting concerns*
+The Decorator pattern shines when used for implementing *cross-cutting concerns*
 (i.e., all parts of an application that are generic and can be applied to many other parts of it)
 such as:
 - data validation

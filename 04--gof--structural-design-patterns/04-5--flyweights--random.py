@@ -1,5 +1,5 @@
 """
-The *flyweight* pattern is used when an application needs to create
+The *Flyweight* pattern is used when an application needs to create
 a large number of computationally expensive objects that share many properties.
 Thus, we minimize memory usage and improve performance by introducing data sharing between similar objects.
 

@@ -46,7 +46,7 @@ class RemoteService(RemoteServiceInterface):
 		return "Deleting file from remote server."
 
 
-# The proxy handles the communication with the remote service,
+# The Proxy handles the communication with the remote service,
 # (potentially adding logging, access control, or caching).
 class ProxyService(RemoteServiceInterface):
 	def __init__(self):

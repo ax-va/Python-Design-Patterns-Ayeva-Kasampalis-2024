@@ -1,5 +1,5 @@
 """
-The singleton pattern restricts a class instance to a single object.
+The Singleton pattern restricts a class instance to a single object.
 ->
 Coordinates actions for the system such as in
 - controlling concurrent access to a shared resource
@@ -9,9 +9,9 @@ from different parts of the application or by different users and do its work
 (for example, the class at the core of a logging system or utility).
 
 Notation:
-In the Python programmer community, the singleton pattern is actually considered an *anti-pattern*.
+In the Python programmer community, the Singleton pattern is actually considered as *anti-pattern*.
 In Python, developers often prefer a simpler alternative to singleton: using a *module-level global object*.
-See the `alternative-to-singleton` directory where it is used.
+See the `03-4-2--alternative-to-singleton` directory where it is used.
 
 See also:
 - The Global Object Pattern

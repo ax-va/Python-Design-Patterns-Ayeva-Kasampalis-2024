@@ -1,5 +1,5 @@
 """
-The *adapter* pattern is a structural design pattern to make two incompatible interfaces compatible.
+The *Adapter* pattern is a structural design pattern to make two incompatible interfaces compatible.
 An example may be adapting an old system component to a new system component or vice versa.
 
 Example: Consider adapting several classes into a unified interface.

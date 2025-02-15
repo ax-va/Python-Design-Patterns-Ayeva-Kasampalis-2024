@@ -1,5 +1,5 @@
 """
-*Dependency inversion principle* (DIP) =
+*Dependency Inversion Principle* (DIP) =
 High-level modules should not depend directly on low-level modules.
 Instead, both should depend on abstractions or interfaces.
 

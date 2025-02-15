@@ -1,8 +1,8 @@
 """
-The *builder* pattern separates the construction of a complex object from its representation,
+The *Builder* pattern separates the construction of a complex object from its representation,
 so that the same construction can be used to create several different representations.
 
-A factory pattern creates an object in a single step, whereas a builder
+A Factory pattern creates an object in a single step, whereas a Builder
 pattern creates an object in multiple steps and almost always uses a *director*.
 """
 import time

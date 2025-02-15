@@ -1,5 +1,5 @@
 """
-*Open-closed principle* (OCP) =
+*Open-Closed Principle* (OCP) =
 Software entities, such as classes and modules, should be open
 for extension (through inheritance or interfaces to accommodate
 new requirements and behaviors) but closed for modification.

@@ -1,5 +1,5 @@
 """
-The proxy design pattern contains:
+The Proxy design pattern contains:
 
 - a *virtual proxy*, which uses *lazy initialization* to defer
 the creation of a computationally expensive object until the moment it is actually needed;

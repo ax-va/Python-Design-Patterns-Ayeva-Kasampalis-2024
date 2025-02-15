@@ -1,5 +1,5 @@
 """
-In the factory design pattern, a client creates an object without knowing how (by which class) the object is created.
+In the Factory design pattern, a client creates an object without knowing how (by which class) the object is created.
 ->
 Possible benefits:
 - easier tracking an object creation

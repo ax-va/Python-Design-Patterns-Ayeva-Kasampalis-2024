@@ -1,5 +1,5 @@
 """
-The *observer* pattern describes a *publish-subscribe relationship* between the *publisher*,
+The *Observer* pattern describes a *publish-subscribe relationship* between the *publisher*,
 also known as the *subject* or *observable* (or *event* in event-driven systems),
 and the subscribers, also known as the *observers* (or *listeners* in event-driven systems).
 The subject notifies the subscribers of any state changes, typically by calling one of their methods.

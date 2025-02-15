@@ -1,6 +1,6 @@
 """
-The *prototype* pattern helps us create new objects by copying existing ones with the change of some attributes
-instead of creating to them from scratch.
+The *Prototype* pattern helps us create new objects by copying existing ones
+with the change of some attributes instead of creating to them from scratch.
 This is useful if the object is expensive to create.
 """
 import copy
@@ -52,12 +52,14 @@ class Prototype:
 		if not found:
 			raise ValueError(f"Incorrect object identifier: {identifier}")
 		obj = copy.deepcopy(found)
+		# Overwrite or set given attributes
 		for key in attrs:
 			setattr(obj, key, attrs[key])
 		return obj
 
 
 def main():
+	# attribute to be copied by `copy.deepcopy`
 	keywords = [
 		"python",
 		"programming",

@@ -1,5 +1,5 @@
 """
-*Interface segregation principle* (ISP) =
+*Interface Segregation Principle* (ISP) =
 A class should not be forced to implement interfaces it does not use.
 In the context of Python, this implies that a class shouldn't be forced
 to inherit and implement methods that are irrelevant to its purpose.

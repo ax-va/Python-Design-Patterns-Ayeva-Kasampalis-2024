@@ -1,5 +1,5 @@
 """
-The *facade* pattern is for providing a simple interface to client code
+The *Facade* pattern is for providing a simple interface to client code
 that wants to use a complex system but does not need to be aware of the system's complexity.
 We can hide the internal complexity of our systems and expose only
 what is necessary to the client through a simplified interface.
