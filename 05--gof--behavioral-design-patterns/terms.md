@@ -62,6 +62,13 @@ In this design pattern, the following definitions are used:
 
 ### Iterators
 
+The *iterator* pattern is a design pattern, in which an *iterator* is used to traverse a container and 
+access the container's elements. 
+The iterator pattern decouples algorithms from containers. 
+In some cases, algorithms are necessarily container-specific and thus cannot be decoupled.
+Iterator in Python is simply an object that can be iterated upon 
+that is, an object that will return data, one element at a time.
+
 ### Templates
 
 ```unix
