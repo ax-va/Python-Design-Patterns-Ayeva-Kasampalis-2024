@@ -72,6 +72,28 @@ that is, an object that will return data, one element at a time.
 
 ### Templates
 
-```unix
-$ python –m pip install cowpy
-```
+The *Template* pattern focuses on eliminating code repetition 
+by redefining certain parts of an algorithm without changing its structure.
+*Invariant* (common) parts of algorithms are kept in a template method/function, and 
+*variant* (different) parts are moved in action/hook methods/functions.
+
+## Other Patterns 
+
+Behavioral design patterns not commonly used by Python developers:
+
+### Mediators
+
+In the *Mediator* pattern, objects don't communicate directly with each other; 
+instead, they communicate through a *mediator* object 
+that acts as a central hub for coordinating communication between the objects.
+
+In Python, you can use event-driven programming with a library such as `asyncio` 
+instead of communication between objects through a mediator object.
+
+### Visitors
+
+For complex use cases, the *Visitor* pattern provides a solution 
+for separating algorithms from the objects on which they operate.
+
+In Python, using functions as first-class citizens, decorators, or context managers 
+can provide ways to encapsulate algorithms and operations without the need for explicit visitor objects.
