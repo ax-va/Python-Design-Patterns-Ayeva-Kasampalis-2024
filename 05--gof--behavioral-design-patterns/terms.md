@@ -79,7 +79,7 @@ by redefining certain parts of an algorithm without changing its structure.
 
 ## Other Patterns 
 
-Behavioral design patterns not commonly used by Python developers:
+Behavioral design patterns that are not commonly used by Python developers:
 
 ### Mediators
 
