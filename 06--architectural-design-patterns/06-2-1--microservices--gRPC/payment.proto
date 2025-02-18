@@ -1,0 +1,25 @@
+/* Define the service and its methods using protobuf */
+
+syntax = "proto3";
+
+package payment;
+
+// Define the payment service
+service PaymentService {
+    // Processes a payment
+    rpc ProcessPayment (PaymentRequest) returns (PaymentResponse) {}
+}
+
+// Define the request message containing payment details
+message PaymentRequest {
+    string order_id = 1;
+    double amount = 2;
+    string currency = 3;
+    string user_id = 4;
+}
+
+// Define the response message containing the result of the payment process
+message PaymentResponse {
+    string payment_id = 1;
+    string status = 2; // e.g., "SUCCESS", "FAILED"
+}

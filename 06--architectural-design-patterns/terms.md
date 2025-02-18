@@ -19,15 +19,12 @@ When implementing MVC from scratch, be sure that you create smart models, thin c
 
 ## Microservices
 
-- gRPC
-```unix
-$ python -m pip install grpcio
-```
+The *Microservice Architecture* pattern, or *Microservices*, is used to build 
+an application as a set of loosely coupled, collaborating services.
+These services are loosely coupled, independently deployable, and communicate via well-defined APIs.
+We run those services packed as containers with our application server, 
+dependencies and runtime libraries, compiled code, configurations, etc.
 
-- gRPC-tools
-```unix
-$ python -m pip install grpcio-tools
-```
 
 - lanarky (a web framework for building LLM microservices) and its dependencies
 ```unix
