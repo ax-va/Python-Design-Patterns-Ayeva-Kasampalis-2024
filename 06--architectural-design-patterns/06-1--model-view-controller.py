@@ -57,6 +57,7 @@ class QuoteTerminalController:
 				n = int(n)
 			except ValueError:
 				self.view.error(f"Incorrect index '{n}'")
+				# Exit the loops
 			valid_input = True
 			quote = self.model.get_quote(n)
 			self.view.show(quote)
