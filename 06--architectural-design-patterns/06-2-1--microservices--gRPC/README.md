@@ -5,7 +5,7 @@
 The *Microservice Architecture* pattern, or *Microservices*, is used to build
 an application as a set of loosely coupled, collaborating services.
 These services are loosely coupled, independently deployable, and communicate via well-defined APIs.
-We run those services packed as containers with our application server,
+We usually run those services packed as containers with our application server,
 dependencies and runtime libraries, compiled code, configurations, etc.
 
 ## Example: a payment service using gRPC.
