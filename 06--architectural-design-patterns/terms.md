@@ -25,12 +25,6 @@ These services are loosely coupled, independently deployable, and communicate vi
 We usually run those services packed as containers with our application server, 
 dependencies and runtime libraries, compiled code, configurations, etc.
 
-
-- lanarky (a web framework for building LLM microservices) and its dependencies
-```unix
-$ python -m pip install "lanarky[openai]"==0.8.6 uvicorn==0.29.0
-```
-
 ## Serverless
 
 - Docker

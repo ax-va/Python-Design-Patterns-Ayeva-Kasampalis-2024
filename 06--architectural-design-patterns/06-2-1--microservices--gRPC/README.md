@@ -8,7 +8,7 @@ These services are loosely coupled, independently deployable, and communicate vi
 We usually run those services packed as containers with our application server,
 dependencies and runtime libraries, compiled code, configurations, etc.
 
-## Example: a payment service using gRPC.
+## Example: a payment service using gRPC
 
 - gRPC is a high-performance universal RPC framework
 that uses *Protocol Buffers (protobuf)* as its interface description language:
