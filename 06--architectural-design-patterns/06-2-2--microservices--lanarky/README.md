@@ -10,7 +10,7 @@ dependencies and runtime libraries, compiled code, configurations, etc.
 
 ## Example: an LLM service using Lanarky
 
-- Lanarky is a web framework that builds upon the FastAPI framework, 
+- Lanarky is a web framework that builds upon the FastAPI framework 
 to provide batteries for building Microservices that use *large language models (LLMs)*:
 
 https://pypi.org/project/lanarky/
