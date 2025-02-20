@@ -2,13 +2,7 @@
 
 ## Microservices
 
-The *Microservice Architecture* pattern, or *Microservices*, is used to build
-an application as a set of loosely coupled, collaborating services.
-These services are loosely coupled, independently deployable, and communicate via well-defined APIs.
-We usually run those services packed as containers with our application server,
-dependencies and runtime libraries, compiled code, configurations, etc.
-
-## Example: an LLM service using Lanarky
+### Example: an LLM service using Lanarky
 
 - Lanarky is a web framework that builds upon the FastAPI framework 
 to provide batteries for building Microservices that use *large language models (LLMs)*:
