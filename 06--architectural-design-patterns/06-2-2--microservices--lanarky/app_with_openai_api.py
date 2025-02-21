@@ -31,3 +31,7 @@ while True:
         # Extract and print the assistant's message
         assistant_message = response.choices[0].message.content
         print(assistant_message)
+"""
+Hallo! Bist du bereit mir zu helfen?
+Hallo! Ja, ich bin bereit zu helfen. Was kann ich für dich tun?
+"""
