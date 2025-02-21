@@ -12,14 +12,16 @@ https://snyk.io/advisor/python/lanarky
 
 - Install Lanarky and its dependencies:
 ```unix
-$ python -m pip install lanarky uvicorn dotenv
+$ python -m pip install lanarky[openai]==0.8.8 uvicorn dotenv
 ```
+Lanarky 0.8.8 does not support Python 3.12+. 
+Make sure that your virtual environment is build with Python 3.11 to install Lanarky.
 
 - Visit https://platform.openai.com/account/api-keys and create an API key.
 Store the secret key in `.env`:
 
 ```env
-open_api_key=<your_key>
+OPENAI_API_KEY=<your_key>
 ```
 
 and add `.env` into `.gitignore`:
@@ -27,3 +29,4 @@ and add `.env` into `.gitignore`:
 ```
 **/.env
 ```
+- To experiment with the OpenAI API, I paid $5.95 one-time.
