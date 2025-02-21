@@ -31,5 +31,3 @@ while True:
         # Extract and print the assistant's message
         assistant_message = response.choices[0].message.content
         print(assistant_message)
-
-
