@@ -9,20 +9,20 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 while True:
-    message = input()
-    if message.lower() in ["exit", "quit", "stop", "ende"]:
+    user_message = input()
+    if user_message.lower() in ["exit", "quit", "stop"]:
         break
 
     # Define the chat messages
     messages = [
         {"role": "system", "content": "Here is your assistant."},
-        {"role": "user", "content": message},
+        {"role": "user", "content": user_message},
     ]
 
     try:
         # Create a chat completion
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-2024-11-20",
             messages=messages,
         )
     except Exception as e:
@@ -32,6 +32,6 @@ while True:
         assistant_message = response.choices[0].message.content
         print(assistant_message)
 """
-Hallo! Bist du bereit mir zu helfen?
-Hallo! Ja, ich bin bereit zu helfen. Was kann ich für dich tun?
+Welches OpenAI Modell bist du?
+Ich bin ein KI-Textmodell basierend auf OpenAI's GPT-4 Architektur. Mein Trainingsstand geht bis Oktober 2023. Wenn du Fragen hast, stehe ich dir gerne zur Verfügung! 😊
 """

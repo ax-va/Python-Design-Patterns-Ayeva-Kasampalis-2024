@@ -7,26 +7,37 @@
 - Lanarky is a web framework that builds upon the FastAPI framework 
 to provide batteries for building Microservices that use *large language models (LLMs)*:
 
-https://pypi.org/project/lanarky/
-https://snyk.io/advisor/python/lanarky
+  - https://pypi.org/project/lanarky/
+  
+  - https://snyk.io/advisor/python/lanarky
+
 
 - Install Lanarky and its dependencies:
-```unix
-$ python -m pip install lanarky[openai]==0.8.8 uvicorn dotenv
-```
-Lanarky 0.8.8 does not support Python 3.12+. 
-Make sure that your virtual environment is build with Python 3.11 to install Lanarky.
 
-- Visit https://platform.openai.com/account/api-keys and create an API key.
-Store the secret key in `.env`:
+  ```unix
+  $ python -m pip install lanarky[openai]==0.8.8 uvicorn dotenv
+  ```
+  Lanarky 0.8.8 does not support Python 3.12+. 
+  Make sure that your virtual environment is build with Python 3.11 to install Lanarky.
 
-```env
-OPENAI_API_KEY=<your_key>
-```
 
-and add `.env` into `.gitignore`:
+- Visit https://platform.openai.com/account/api-keys and create an API key. 
+  Store the secret key in `.env`:
 
-```
-**/.env
-```
-- To experiment with the OpenAI API, I paid $5.95 one-time.
+  ```env
+  OPENAI_API_KEY=<your_key>
+  ```
+
+  and add `.env` into `.gitignore`:
+
+  ```
+  **/.env
+  ```
+
+- I paid $5.95 one-time to work with OpenAI API.
+
+
+- Run `app_with_openai_api` and write a message to check whether the OpenAI API works as expected.
+
+
+- Run the `llm_service` service and the `client` client separately.
