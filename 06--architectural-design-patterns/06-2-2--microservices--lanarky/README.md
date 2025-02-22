@@ -39,4 +39,4 @@ to provide batteries for building Microservices that use *large language models 
 - Run `app_with_openai_api` and write a message to check whether the OpenAI API works as expected.
 
 
-- Run the `llm_service` service and the `client` client separately.
+- First run the `llm_service` service and then the `client` client separately.
