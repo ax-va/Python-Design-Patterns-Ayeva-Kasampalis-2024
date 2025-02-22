@@ -12,14 +12,13 @@ to provide batteries for building Microservices that use *large language models 
   - https://snyk.io/advisor/python/lanarky
 
 
-- Install Lanarky and its dependencies:
+- Install Lanarky with its dependencies and other packages.
+  Lanarky 0.8.8 does not support Python 3.12+. 
+  Make sure that your virtual environment is build with Python 3.11 to install Lanarky.
 
   ```unix
   $ python -m pip install lanarky[openai]==0.8.8 uvicorn dotenv
   ```
-  Lanarky 0.8.8 does not support Python 3.12+. 
-  Make sure that your virtual environment is build with Python 3.11 to install Lanarky.
-
 
 - Visit https://platform.openai.com/account/api-keys and create an API key. 
   Store the secret key in `.env`:
@@ -34,7 +33,7 @@ to provide batteries for building Microservices that use *large language models 
   **/.env
   ```
 
-- I paid $5.95 one-time to work with OpenAI API.
+- You must pay to work with OpenAI API. I paid $5.95 one-time for a current month.
 
 
 - Run `app_with_openai_api` and write a message to check whether the OpenAI API works as expected.
