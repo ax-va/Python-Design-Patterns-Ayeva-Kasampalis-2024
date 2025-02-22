@@ -8,6 +8,7 @@
 to provide batteries for building Microservices that use *large language models (LLMs)*:
 
 https://pypi.org/project/lanarky/
+
 https://snyk.io/advisor/python/lanarky
 
 - Install Lanarky with its dependencies and other packages.
