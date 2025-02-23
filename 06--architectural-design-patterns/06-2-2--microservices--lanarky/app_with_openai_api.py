@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 # Load environment variables from `.env` file
 load_dotenv()
 
-# Initialize the OpenAI client
+# Get the secret key
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError(
@@ -14,6 +14,7 @@ if not api_key:
         "is correctly configured."
     )
 
+# Initialize the OpenAI client
 client = openai.OpenAI(api_key=api_key)
 
 
