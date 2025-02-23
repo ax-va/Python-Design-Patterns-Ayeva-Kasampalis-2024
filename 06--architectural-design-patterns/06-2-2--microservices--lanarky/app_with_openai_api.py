@@ -8,16 +8,29 @@ load_dotenv()
 # Initialize the OpenAI client
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
-    raise ValueError("API key not found. Please ensure the .env file is correctly configured.")
+    raise ValueError(
+        "API key not found. "
+        "Please ensure the `.env` file "
+        "is correctly configured."
+    )
 
 client = openai.OpenAI(api_key=api_key)
 
 
 def main():
-    print("Welcome to the chat! Type 'exit', 'quit', or 'stop' to end the conversation.")
+    print(
+        "Welcome to the chat! "
+        "Type 'exit', 'quit', or 'stop' "
+        "to end the conversation."
+    )
 
     # Conversation history to maintain context
-    messages = [{"role": "system", "content": "You are a helpful assistant."}]
+    messages = [
+        {
+            "role": "system",
+            "content": "You are a helpful assistant."
+        }
+    ]
 
     try:
         while True:
@@ -31,7 +44,12 @@ def main():
                 break
 
             # Add user message to conversation history
-            messages.append({"role": "user", "content": user_message})
+            messages.append(
+                {
+                    "role": "user",
+                    "content": user_message
+                }
+            )
 
             try:
                 # Create a chat completion
@@ -46,7 +64,12 @@ def main():
                 print(f"Assistant: {assistant_message}")
 
                 # Add assistant response to conversation history
-                messages.append({"role": "assistant", "content": assistant_message})
+                messages.append(
+                    {
+                        "role": "assistant",
+                        "content": assistant_message
+                    }
+                )
 
             except openai.OpenAIError as e:
                 print(f"Error during API request: {e}")
