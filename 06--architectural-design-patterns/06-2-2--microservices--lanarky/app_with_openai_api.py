@@ -77,5 +77,6 @@ def main():
     except KeyboardInterrupt:
         print("\nChat interrupted by user. Goodbye!")
 
+
 if __name__ == "__main__":
     main()
