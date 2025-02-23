@@ -12,6 +12,7 @@ if not api_key:
 
 client = openai.OpenAI(api_key=api_key)
 
+
 def main():
     print("Welcome to the chat! Type 'exit', 'quit', or 'stop' to end the conversation.")
 
