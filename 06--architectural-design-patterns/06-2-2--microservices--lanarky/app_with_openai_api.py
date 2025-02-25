@@ -44,7 +44,7 @@ def main():
                 print("Chat ended. Goodbye!")
                 break
 
-            # Add user message to conversation history
+            # The LLM remembers what the user asked
             messages.append(
                 {
                     "role": "user",
@@ -64,7 +64,7 @@ def main():
                 assistant_message = response.choices[0].message.content
                 print(f"Assistant: {assistant_message}")
 
-                # Add assistant response to conversation history
+                # The LLM remember what it answered
                 messages.append(
                     {
                         "role": "assistant",

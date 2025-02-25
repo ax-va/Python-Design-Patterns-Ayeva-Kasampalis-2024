@@ -1,22 +1,39 @@
 from lanarky.clients import StreamingClient
 
 client = StreamingClient()
+messages = []
 
 while True:
-	message = input()
-	if message.lower() in ["exit", "quit", "stop"]:
+	user_message = input("\nYou: ").strip()
+	if not user_message:
+		print("Please enter a message.")
+		continue
+
+	if user_message.lower() in ["exit", "quit", "stop"]:
+		print("Chat ended. Goodbye!")
 		break
+
+	# The LLM remembers what the user asked
+	messages.append({"role": "user", "content": user_message})
 
 	for event in client.stream_response(
 		"POST",
 		"/chat",
 		params={"stream": "false"},
-		json={"messages": [{"role": "user", "content": message}]}
+		json={"messages": messages}
 	):
-		print(f"{event.event}: {event.data}")
+		assistant_message = event.data
+		print(f"{event.event}: {assistant_message}")
+		# The LLM remembers what it answered
+		messages.append({"role": "assistant", "content": assistant_message})
 
 
 """
-Hallo!
-completion: Hallo! Wie kann ich Ihnen helfen?
+You: Nenne mir eine Zahl 1 bis 9
+completion: Natürlich, die Zahl ist 7.
+
+You: Welche Zahl hast du mir gerade genannt?
+completion: Die Zahl, die ich dir gerade genannt habe, war 7.
+
+You:
 """
