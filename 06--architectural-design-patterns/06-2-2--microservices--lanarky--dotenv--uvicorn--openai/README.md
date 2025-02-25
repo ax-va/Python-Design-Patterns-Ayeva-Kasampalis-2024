@@ -33,10 +33,11 @@ to provide batteries for building Microservices that use *large language models 
   **/.env
   ```
 
-- You must pay to work with OpenAI API. I paid $5.95 one-time for a current month.
+- You must pay to work with OpenAI API. 
+I paid $5.95 one-time to gain the simplest access to OpenAI models.
 
 
 - Run `app_with_openai_api` and write a message to check whether the OpenAI API works as expected.
 
 
-- First run the `llm_service` service and then the `client` client separately.
+- In different terminals, first run the `llm_service` service and then the `client` client.
