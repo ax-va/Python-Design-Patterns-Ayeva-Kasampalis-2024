@@ -32,6 +32,8 @@ while True:
 
 
 """
+$ python client.py
+
 You: Nenne mir eine Zahl 1 bis 9
 completion: Natürlich, die Zahl ist 7.
 
