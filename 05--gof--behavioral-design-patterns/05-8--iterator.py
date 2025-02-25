@@ -46,17 +46,26 @@ def main():
 
 	try:
 		while True:
-			print(next(team_iter))
+			print("in `while`:", next(team_iter))
 	except StopIteration:
 		print("(End)")
+
+	for member in team:
+		print("in `for`:", member)
 
 
 if __name__ == "__main__":
 	main()
-	# player1
+	# in `while`: player1
 	# ...
-	# player22
-	# coach1
-	# coach2
-	# coach3
+	# in `while`: player22
+	# in `while`: coach1
+	# in `while`: coach2
+	# in `while`: coach3
 	# (End)
+	# in `for`: player1
+	# ...
+	# in `for`: player22
+	# in `for`: coach1
+	# in `for`: coach2
+	# in `for`: coach3
