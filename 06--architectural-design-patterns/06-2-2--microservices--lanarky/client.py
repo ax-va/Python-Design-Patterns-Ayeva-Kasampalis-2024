@@ -1,3 +1,6 @@
+"""
+This example of applying the Microservices pattern consists of a service and a client.
+"""
 from lanarky.clients import StreamingClient
 
 client = StreamingClient()

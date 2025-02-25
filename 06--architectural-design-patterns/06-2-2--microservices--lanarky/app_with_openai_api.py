@@ -1,3 +1,6 @@
+"""
+Demonstrate working with the LLM without the Microservices pattern.
+"""
 import os
 import openai
 from dotenv import load_dotenv

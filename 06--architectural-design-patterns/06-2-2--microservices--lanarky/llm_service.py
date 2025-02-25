@@ -1,3 +1,6 @@
+"""
+This example of applying the Microservices pattern consists of a service and a client.
+"""
 import uvicorn
 from dotenv import load_dotenv
 from lanarky import Lanarky
