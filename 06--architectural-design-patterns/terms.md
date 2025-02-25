@@ -27,22 +27,10 @@ dependencies and runtime libraries, compiled code, configurations, etc.
 
 ## Serverless
 
-- Docker
-
-- LocalStack (cloud service emulator that runs in a single container on your laptop or in your CI environment) for testing AWS Lambda locally
-```unix
-$ python -m pip install localstack
-```
-
-- awscli-local
-```unix
-$ python -m pip install awscli-local
-```
-
-- awscli
-```unix
-$ python -m pip install awscli
-```
+The *Serverless* pattern abstracts server management, allowing developers to focus solely on code.
+Cloud providers handle the scaling and execution based on event triggers, 
+such as HTTP requests, file uploads, or database modifications.
+For example, AWS Lambda is Amazon's serverless compute service, which runs code in response to triggers.
 
 ## Event Sourcing
 
