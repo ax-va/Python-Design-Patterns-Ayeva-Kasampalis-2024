@@ -189,9 +189,23 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
    }
   ```
 
-- Check log
+- Check logs
   ```
   $ docker logs localstack
+  
+  LocalStack version: 4.2.1.dev3
+  LocalStack build date: 2025-02-27
+  LocalStack build git hash: 3cac1548f
+  
+  Ready.
+  2025-02-27T21:45:39.499  INFO --- [et.reactor-0] localstack.request.aws     : AWS lambda.CreateFunction => 201
+  2025-02-27T21:46:04.860  INFO --- [et.reactor-1] localstack.request.aws     : AWS lambda.GetFunction => 200
+  2025-02-27T21:46:24.808  INFO --- [et.reactor-0] l.u.container_networking   : Determined main container network: bridge
+  2025-02-27T21:46:24.811  INFO --- [et.reactor-0] l.u.container_networking   : Determined main container target IP: 172.17.0.2
+  2025-02-27T21:46:25.313  INFO --- [et.reactor-1] localstack.request.http    : POST /_localstack_lambda/bd02d1c6742ba34b9da8ffecd9551a84/status/bd02d1c6742ba34b9da8ffecd9551a84/ready => 202
+  2025-02-27T21:46:25.319  INFO --- [et.reactor-1] localstack.request.http    : POST /_localstack_lambda/bd02d1c6742ba34b9da8ffecd9551a84/invocations/fc3806e1-4c91-40d4-ad80-bc6882511933/logs => 202
+  2025-02-27T21:46:25.321  INFO --- [et.reactor-1] localstack.request.http    : POST /_localstack_lambda/bd02d1c6742ba34b9da8ffecd9551a84/invocations/fc3806e1-4c91-40d4-ad80-bc6882511933/response => 202
+  2025-02-27T21:46:25.324  INFO --- [et.reactor-0] localstack.request.aws     : AWS lambda.Invoke => 200
   ```
 
 - Generate a URL that can be used to invoke the Lambda function
@@ -200,17 +214,18 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
       --function-name lambda_function_square \
       --auth-type NONE
   {
-      "FunctionUrl": "http://3d01tt9vu0jomtfvq3nehn992n04nxg8.lambda-url.us-east-1.localhost.localstack.cloud:4566/",
+      "FunctionUrl": "http://9e2fsnh951l3ts5ljyyo38si21fhr341.lambda-url.us-east-1.localhost.localstack.cloud:4566/",
       "FunctionArn": "arn:aws:lambda:us-east-1:000000000000:function:lambda_function_square",
       "AuthType": "NONE",
-      "CreationTime": "2025-02-27T21:10:03.246849+0000"
-  }
+      "CreationTime": "2025-02-27T21:47:38.944326+0000"
+  
+    }
   ```
 
 - Trigger the Lambda function URL using **cUrl**
   ```unix
   $ curl -X POST \
-      'http://3d01tt9vu0jomtfvq3nehn992n04nxg8.lambda-url.us-east-1.localhost.localstack.cloud:4566/' \
+      'http://9e2fsnh951l3ts5ljyyo38si21fhr341.lambda-url.us-east-1.localhost.localstack.cloud:4566/' \
       -H 'Content-Type: application/json' \
       -d '{"number": 6}'
     Internal Server Error
