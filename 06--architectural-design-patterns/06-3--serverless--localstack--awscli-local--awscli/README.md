@@ -182,7 +182,7 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
 - Before using the Function URL, test the function by invoking it directly
   ```unix
   $ awslocal lambda invoke --function-name lambda_function_square \
-    --payload '{"number": 6}' output.tx
+    --payload '{"number": 6}' output.txt
    {
       "StatusCode": 200,
       "ExecutedVersion": "$LATEST"
