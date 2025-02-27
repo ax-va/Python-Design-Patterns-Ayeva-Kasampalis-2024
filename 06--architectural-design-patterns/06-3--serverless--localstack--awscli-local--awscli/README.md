@@ -155,7 +155,7 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
 - Compress your Python code file to a ZIP file
     ```unix
     $ zip lambda.zip lambda_function_square.py
-    adding: lambda_function_square.py (deflated 35%)
+    adding: lambda_function_square.py (deflated 57%)
     ```
 
 - Deploy the Lambda function into the "local stack" AWS infrastructure
@@ -171,6 +171,13 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
   ...
   ```
   
+- Re-deploy the Lambda function if the `zip` file was updated
+  ```unix
+  $ awslocal lambda update-function-code \
+    --function-name lambda_function_square \
+    --zip-file fileb://lambda.zip
+  ```
+  
 - Check the status
   ```unix
   $ awslocal lambda get-function --function-name lambda_function_square
@@ -179,7 +186,7 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
   ...
   ```
 
-- Before using the Function URL, test the function by invoking it directly
+- Before using the Lambda function URL, test the function by invoking it directly
   ```unix
   $ awslocal lambda invoke --function-name lambda_function_square \
     --payload '{"number": 6}' output.txt
@@ -228,7 +235,7 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
       'http://9e2fsnh951l3ts5ljyyo38si21fhr341.lambda-url.us-east-1.localhost.localstack.cloud:4566/' \
       -H 'Content-Type: application/json' \
       -d '{"number": 6}'
-    Internal Server Error
+    {"result": 36, "event": {"version": "2.0", "routeKey": "$default", "rawPath": "/", "rawQueryString": "", "headers": {"host": "9e2fsnh951l3ts5ljyyo38si21fhr341.lambda-url.us-east-1.localhost.localstack.cloud:4566", "user-agent": "curl/7.81.0", "accept": "*/*", "content-type": "application/json", "content-length": "13", "x-amzn-tls-cipher-suite": "ECDHE-RSA-AES128-GCM-SHA256", "x-amzn-tls-version": "TLSv1.2", "x-forwarded-proto": "http", "x-forwarded-for": "", "x-forwarded-port": "4566"}, "queryStringParameters": {}, "requestContext": {"accountId": "anonymous", "apiId": "9e2fsnh951l3ts5ljyyo38si21fhr341", "domainName": "9e2fsnh951l3ts5ljyyo38si21fhr341.lambda-url.us-east-1.localhost.localstack.cloud:4566", "domainPrefix": "9e2fsnh951l3ts5ljyyo38si21fhr341", "http": {"method": "POST", "path": "/", "protocol": "HTTP/1.1", "sourceIp": "", "userAgent": "curl/7.81.0"}, "requestId": "1472a808-0a58-4b07-9cae-066c0e711d15", "routeKey": "$default", "stage": "$default", "time": "27/Feb/2025:22:45:15 +0000", "timeEpoch": 1740696315711}, "body": "{\"number\": 6}", "isBase64Encoded": false}, "type(event)": "<class 'dict'>", "body": {"number": 6}}
   ```
 
 - Stop and remove the running LocalStack container

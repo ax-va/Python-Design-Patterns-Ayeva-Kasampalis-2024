@@ -4,21 +4,45 @@ import json
 # This function will be deployed so that
 # it can be invoked as an AWS Lambda function.
 def lambda_handler(event, context):
-	number = event["number"]
-	squared = number ** 2
+	try:
+		# Distinguish between URL call and direct call
+		body = json.loads(event.get("body", "{}")) if "body" in event else event
 
-	response_body = {
-		"message": "Success",
-		"data": f"The square of {number} is {squared}."
-	}
+		number = body.get("number")
+		if number is None:
+			return {
+				"statusCode": 400,
+				"body": json.dumps(
+					{
+						"error": "Missing 'number' in request body",
+						"event": event,
+						"type(event)": str(type(event)),
+						"body": body
+					}
+				)
+			}
 
-	response = {
-		"isBase64Encoded": False,
-		"statusCode": 200,
-		"headers": {
-			"Content-Type": "application/json"
-		},
-		"body": json.dumps(response_body)
-	}
+		result = number * number
 
-	return response
+		return {
+			"statusCode": 200,
+			"body": json.dumps(
+				{
+					"result": result,
+					"event": event,
+					"type(event)": str(type(event)),
+					"body": body
+				}
+			)
+		}
+	except Exception as e:
+		return {
+			"statusCode": 500,
+			"body": json.dumps(
+				{
+					"error": str(e),
+					"event": event,
+					"type(event)": str(type(event))
+				}
+			)
+		}
