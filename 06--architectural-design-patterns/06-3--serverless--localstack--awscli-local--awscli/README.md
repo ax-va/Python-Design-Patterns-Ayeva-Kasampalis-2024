@@ -124,7 +124,7 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
   ```
   Add `127.0.0.1   localhost.localstack.cloud`, then `Ctrl+O`, `Enter`, `Ctrl+X`.
 
-- Start LocalStack inside a Docker container by running the available executable in the Python environment
+- Start LocalStack inside a Docker container in the Python environment
     ```unix
     $ docker run -d --name localstack \
       -p 4566:4566 \
