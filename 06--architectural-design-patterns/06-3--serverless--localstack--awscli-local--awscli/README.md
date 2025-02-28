@@ -124,29 +124,6 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
   ```
   Add `127.0.0.1   localhost.localstack.cloud`, then `Ctrl+O`, `Enter`, `Ctrl+X`.
 
-- Optionally
-
-  - Stop and disable `systemd-resolved`
-    ```unix
-    $ sudo systemctl stop systemd-resolved
-    $ sudo systemctl disable systemd-resolved
-    ```
-  
-  - Update DNS configuration
-    ```unix
-    $ sudo nano /etc/resolv.conf
-    ```
-    Update to
-    ```
-    nameserver 8.8.8.8
-    nameserver 8.8.4.4
-    ```
-
-  - Restart the `systemd-networkd` service
-    ```unix
-    $ sudo systemctl restart systemd-networkd
-    ```
-
 - Start LocalStack inside a Docker container by running the available executable in the Python environment
     ```unix
     $ docker run -d --name localstack \
