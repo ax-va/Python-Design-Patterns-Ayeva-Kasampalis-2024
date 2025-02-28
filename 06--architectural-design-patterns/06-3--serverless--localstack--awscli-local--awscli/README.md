@@ -134,6 +134,11 @@ For example, AWS Lambda is Amazon's serverless compute service, which runs code 
   ```unix
   $ sudo nano /etc/resolv.conf
   ```
+  Update to
+  ```
+  nameserver 8.8.8.8
+  nameserver 8.8.4.4
+  ```
 
 - Restart the `systemd-networkd` service
   ```unix
