@@ -6,7 +6,7 @@
 
 - After stopping `systemd-resolved`, you likely modified `/etc/resolv.conf` manually.
   If you restart `systemd-resolved`, it may replace `/etc/resolv.conf` with its own configuration, potentially breaking LocalStack’s DNS resolution.
-  You stopped `systemd-resolved` to avoid conflicts
+  You stopped `systemd-resolved` to avoid conflicts.
 
 - LocalStack relies on custom DNS settings (especially when binding to `localhost.localstack.cloud`), 
   which `systemd-resolved` might interfere with.
