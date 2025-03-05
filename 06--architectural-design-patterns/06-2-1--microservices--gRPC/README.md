@@ -1,6 +1,12 @@
-# Architectural Desing Patterns
+# Architectural Design Patterns
 
 ## Microservices
+
+In the *Microservice Architecture* pattern, or *Microservices*, an application is considered 
+as a set of collaborating and independent services, each responsible for a specific business function.
+These services are loosely coupled, independently deployable, and communicate via well-defined APIs.
+We usually run those services packed as containers with our application server, 
+dependencies and runtime libraries, compiled code, configurations, etc.
 
 ### Example: a payment service using gRPC
 

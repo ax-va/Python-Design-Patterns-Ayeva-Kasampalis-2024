@@ -2,7 +2,8 @@
 
 ## Serverless
 
-The *Serverless* pattern abstracts server management, allowing developers to focus solely on code.
+The *Serverless* pattern shifts the focus from server management to pure business logic 
+by leveraging cloud services to execute code snippets in response to events.
 Cloud providers handle the scaling and execution based on event triggers, 
 such as HTTP requests, file uploads, or database modifications.
 For example, AWS Lambda is Amazon's serverless compute service, which runs code in response to triggers.

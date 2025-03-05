@@ -1,6 +1,6 @@
-# Foundational Design Principles
+## Foundational Design Principles
 
-## Encapsulate What Varies
+### Encapsulate What Varies
 
 Isolate the parts of your code that are most likely to change and encapsulate them.
 
@@ -16,12 +16,12 @@ Isolate the parts of your code that are most likely to change and encapsulate th
   - When using *properties*, *getters* allow reading the values of attributes and *setters* enable modifying them.
 
 
-## Favor Composition Over Inheritance 
+### Favor Composition Over Inheritance 
 
 The *composition* means a "has-a" relationship.
 Prefer composing objects from simpler parts to inheriting functionalities from a base class.
 
-## Program to Interfaces, Not Implementations
+### Program to Interfaces, Not Implementations
 
 Code against an interface rather than a concrete class.
 
@@ -37,7 +37,7 @@ Code against an interface rather than a concrete class.
     2. **Protocols** offer a more flexible approach than ABCs, known as *structural duck typing*, 
     where an object is considered valid if it has certain attributes or methods, regardless of its actual inheritance.
 
-## Loose coupling
+### Loose coupling
 
 Decrease the dependencies between different parts of a program so that
 components are independent and interact through well-defined interfaces.
