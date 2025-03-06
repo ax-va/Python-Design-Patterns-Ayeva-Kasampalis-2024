@@ -1,5 +1,5 @@
 """
-In the *Thread Pool* pattern, when one worker thread finishes a task,
+In the *Thread Pool* pattern, when one *worker thread* finishes a task,
 it does not terminate but goes back to the pool,
 awaiting another task that it can be used again for.
 
