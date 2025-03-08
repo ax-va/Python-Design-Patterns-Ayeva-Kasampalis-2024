@@ -1,4 +1,6 @@
 """
+Command
+
 The *Command* pattern is used to encapsulate an operation
 (e.g. undo, redo, copy, paste, capitalize text, and so forth) as an object.
 

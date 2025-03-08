@@ -1,4 +1,6 @@
 """
+Chain of Responsibility
+
 The *Chain of Responsibility* pattern is used to handle requests by passing them from the sender (client) to receivers
 (processing elements, handlers) through a chain of handlers.
 Each handler decides either whether it can process the request or whether it should delegate it further along the chain.

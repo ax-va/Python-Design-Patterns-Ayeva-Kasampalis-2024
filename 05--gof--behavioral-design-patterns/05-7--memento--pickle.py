@@ -1,4 +1,6 @@
 """
+Memento
+
 The *Memento* pattern is used to take a snapshot of the internal state of an object,
 so that the object can be restored with it when needed.
 In this design pattern, the following definitions are used:

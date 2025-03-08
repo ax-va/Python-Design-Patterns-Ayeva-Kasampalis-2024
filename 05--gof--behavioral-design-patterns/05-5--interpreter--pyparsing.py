@@ -1,4 +1,6 @@
 """
+Interpreter
+
 A *(domain-specific language) DSL* is a computer language of limited expressiveness targeting a particular domain,
 such as combat simulation, billing, visualization, configuration, and communication protocols.
 *Internal DSLs* are built on top of a host programming language, which is Python in our case.

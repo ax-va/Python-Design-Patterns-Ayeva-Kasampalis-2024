@@ -1,4 +1,6 @@
 """
+State
+
 A *(finite) state machine* is an abstract machine with two key components, that is, states and transitions.
 A state is the current (active) status of a system.
 A transition is a switch from one state to another that is initiated by an event or condition.

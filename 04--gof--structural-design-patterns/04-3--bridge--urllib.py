@@ -1,4 +1,6 @@
 """
+Bridge
+
 While the **Adapter pattern** is used *later* to make unrelated classes work together,
 the **Bridge pattern** is designed *up-front* to decouple an implementation from its abstraction.
 This means the bridge pattern is used *up-front* to define an abstraction and its implementation

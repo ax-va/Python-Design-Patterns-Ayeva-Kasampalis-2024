@@ -1,4 +1,6 @@
 """
+Singleton
+
 The Singleton pattern restricts a class instance to a single object.
 ->
 Coordinates actions for the system such as in

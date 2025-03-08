@@ -1,4 +1,6 @@
 """
+Prototype
+
 The *Prototype* pattern helps us create new objects by copying existing ones
 with the change of some attributes instead of creating to them from scratch.
 This is useful if the object is expensive to create.

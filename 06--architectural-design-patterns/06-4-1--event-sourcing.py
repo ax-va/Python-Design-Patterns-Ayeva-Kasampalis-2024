@@ -1,4 +1,6 @@
 """
+Event Sourcing
+
 The *Event Sourcing* pattern helps us in storing all changes to an application state as a sequence of events.
 This way, the application state can be reconstructed at any point in time by replaying these events.
 

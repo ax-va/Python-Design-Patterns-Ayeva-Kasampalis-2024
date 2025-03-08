@@ -1,4 +1,6 @@
 """
+Proxy
+
 The Proxy design pattern contains:
 
 - a *virtual proxy*, which uses *lazy initialization* to defer

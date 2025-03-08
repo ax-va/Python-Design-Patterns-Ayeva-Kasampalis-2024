@@ -1,4 +1,6 @@
 """
+Worker Model
+
 In the *Worker Model* pattern, a large task or many tasks are divided into
 smaller, manageable units of work, called *workers*, that can be processed in parallel.
 The workers could be threads within a single application, separate processes on the same machine,
@@ -6,11 +8,11 @@ or even different machines in a distributed system.
 
 Three components are involved in this pattern:
 
-- the *workers* that can perform a piece of the task independently of each other;
-- the *task queue* where tasks are stored awaiting processing;
-- the *dispatcher* / *master* / *boss thread* that assigns tasks to workers based on availability, load, or priority.
+- The *workers* that can perform a piece of the task independently of each other;
+- The *task queue* where tasks are stored awaiting processing;
+- The *dispatcher* / *master* / *boss thread* that assigns tasks to workers based on availability, load, or priority.
 
-### Thread Pool vs. Worker Model
+Thread Pool vs. Worker Model
 
 - The Thread Pool pattern emphasizes efficient thread management and reuse,
 while the Worker Model pattern centers on the delegation relationship between a master thread and worker threads.

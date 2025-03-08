@@ -1,4 +1,6 @@
 """
+Observer
+
 The *Observer* pattern describes a *publish-subscribe relationship* between the *publisher*,
 also known as the *subject* or *observable* (or *event* in event-driven systems),
 and the subscribers, also known as the *observers* (or *listeners* in event-driven systems).
@@ -16,9 +18,9 @@ class WeatherObserver:
 	# The weather station calls `update` when notifying about changes
 	def update(self, **weather_data):
 		print(
-			f"\tTemperature: {weather_data.get("temperature")}°C, "
-			f"Humidity: {weather_data.get("humidity")}%, "
-			f"Pressure: {weather_data.get("pressure")}hPa"
+			f"\tTemperature: {weather_data.get('temperature')}°C, "
+			f"Humidity: {weather_data.get('humidity')}%, "
+			f"Pressure: {weather_data.get('pressure')}hPa"
 		)
 
 # subject

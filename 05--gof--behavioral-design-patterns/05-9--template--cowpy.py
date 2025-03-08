@@ -1,4 +1,6 @@
 """
+Template
+
 The *Template* pattern focuses on eliminating code repetition
 by redefining certain parts of an algorithm without changing its structure.
 *Invariant* (common) parts of algorithms are kept in a template method/function, and

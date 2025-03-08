@@ -1,4 +1,6 @@
 """
+Decorator
+
 The *Decorator* pattern is used to extend the behavior of an object without using inheritance.
 We can add responsibilities to an object dynamically, and in a transparent manner (without affecting other objects).
 

@@ -1,9 +1,11 @@
 """
+Thread Pool
+
 In the *Thread Pool* pattern, when one *worker thread* finishes a task,
 it does not terminate but goes back to the pool,
 awaiting another task that it can be used again for.
 
-### Thread Pool vs. Worker Model
+Thread Pool vs. Worker Model
 
 - The Thread Pool pattern emphasizes efficient thread management and reuse,
 while the Worker Model pattern centers on the delegation relationship between a master thread and worker threads.

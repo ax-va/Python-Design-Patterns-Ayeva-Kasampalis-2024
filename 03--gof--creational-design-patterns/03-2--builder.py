@@ -1,4 +1,6 @@
 """
+Builder
+
 The *Builder* pattern separates the construction of a complex object from its representation,
 so that the same construction can be used to create several different representations.
 

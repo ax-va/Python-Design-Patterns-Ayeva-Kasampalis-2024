@@ -1,4 +1,6 @@
 """
+Model-View-Controller
+
 The *Model-View-Controller (MVC)* pattern is an application of the *separation of concern* principle and
 used for *loose coupling* to split a software application into three components:
 
