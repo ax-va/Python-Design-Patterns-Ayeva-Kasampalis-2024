@@ -39,8 +39,8 @@ That property is referred to as *non-blocking*.
 
 A *Promise* is the counterpart to a Future. 
 It represents the producer side of the asynchronous operation, 
-which will provide a result to its associated Future,
-thus, fulfilling or rejecting the Promise.
+which will provide a result to its associated Future.
+Eventually, the Promise will be fulfilled or rejected.
 
 Three steps of its mechanism:
 

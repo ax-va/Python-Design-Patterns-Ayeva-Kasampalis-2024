@@ -24,29 +24,3 @@ This allows the program to remain responsive and continue with other tasks.
 If the operation fails, the Promise is rejected with an error.
 The fulfillment or rejection of the Promise resolves the Future.
 """
-from concurrent.futures import ThreadPoolExecutor, as_completed
-
-
-def division_of_ten(x):
-	return 10 / x
-
-
-with ThreadPoolExecutor() as executor:
-	future1 = executor.submit(division_of_ten, 1)
-	future2 = executor.submit(division_of_ten, 0)
-	future3 = executor.submit(division_of_ten, 2)
-	future4 = executor.submit(division_of_ten, 5)
-	future5 = executor.submit(division_of_ten, 10)
-	futures = [future1, future2, future3, future4, future5]
-	# Iterate over completed Future objects and retrieve their results
-	for future in as_completed(futures):
-		try:
-			print(f"Promise fulfilled: {future.result()}")
-		except Exception as e:
-			print(f"Promise rejected: {e}")
-
-	# Promise rejected: division by zero
-	# Promise fulfilled: 5.0
-	# Promise fulfilled: 10.0
-	# Promise fulfilled: 2.0
-	# Promise fulfilled: 1.0
