@@ -31,22 +31,24 @@ def division_of_ten(x):
 	return 10 / x
 
 
-with ThreadPoolExecutor() as executor:
-	future1 = executor.submit(division_of_ten, 1)
-	future2 = executor.submit(division_of_ten, 0)
-	future3 = executor.submit(division_of_ten, 2)
-	future4 = executor.submit(division_of_ten, 5)
-	future5 = executor.submit(division_of_ten, 10)
-	futures = [future1, future2, future3, future4, future5]
-	# Iterate over completed Future objects and retrieve their results
-	for future in as_completed(futures):
-		try:
-			print(f"Promise fulfilled: {future.result()}")
-		except Exception as e:
-			print(f"Promise rejected: {e}")
+def main():
+	with ThreadPoolExecutor() as executor:
+		futures = [
+			executor.submit(division_of_ten, i)
+			for i in (1, 2, 0, 5, 10)
+		]
+		# Iterate over completed Future objects and retrieve their results
+		for future in as_completed(futures):
+			try:
+				print(f"Promise fulfilled: {future.result()}")
+			except Exception as e:
+				print(f"Promise rejected: {e}")
 
-	# Promise rejected: division by zero
+
+if __name__ == "__main__":
+	main()
 	# Promise fulfilled: 5.0
+	# Promise rejected: division by zero
 	# Promise fulfilled: 10.0
 	# Promise fulfilled: 2.0
 	# Promise fulfilled: 1.0

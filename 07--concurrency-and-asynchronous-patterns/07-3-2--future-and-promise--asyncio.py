@@ -24,3 +24,35 @@ This allows the program to remain responsive and continue with other tasks.
 If the operation fails, the Promise is rejected with an error.
 The fulfillment or rejection of the Promise resolves the Future.
 """
+import asyncio
+
+
+# Define coroutine
+async def division_of_ten(x):
+	# Simulate some IO-bound operation
+	await asyncio.sleep(1)  # also a coroutine
+	return 10 / x
+
+
+async def main():
+	futures = [
+		asyncio.ensure_future(division_of_ten(i))
+		for i in (1, 2, 0, 5, 10)
+	]
+	# Use coroutine to wait for the Futures to complete and gather the results
+	results = await asyncio.gather(*futures, return_exceptions=True)
+	for result in results:
+		if isinstance(result, Exception):
+			print(f"Promise rejected: {result}")
+		else:
+			print(f"Promise fulfilled: {result}")
+
+
+if __name__ == "__main__":
+	# Run `asyncio`'s event loop
+	asyncio.run(main())
+	# Promise fulfilled: 10.0
+	# Promise fulfilled: 5.0
+	# Promise rejected: division by zero
+	# Promise fulfilled: 2.0
+	# Promise fulfilled: 1.0
