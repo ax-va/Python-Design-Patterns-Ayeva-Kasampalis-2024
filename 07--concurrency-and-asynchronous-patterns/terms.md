@@ -55,4 +55,9 @@ This allows the program to remain responsive and continue with other tasks.
 If the operation fails, the Promise is rejected with an error.
 The fulfillment or rejection of the Promise resolves the Future.
 
-### Observer (in Reactive Programming)
+### Observer in Reactive Programming
+
+To put it simply, the concept of *reactive programming* is 
+to react to many events (streams of events) while keeping the code clean,
+This concept, added to the traditional Observer pattern, 
+creates the *Observer* pattern *in reactive programming*.
