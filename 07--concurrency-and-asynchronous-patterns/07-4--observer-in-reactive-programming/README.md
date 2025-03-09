@@ -10,8 +10,8 @@ creates the *Observer* pattern *in reactive programming*.
 3. The count of Taylor's will be increased in the terminal output after emitting the data.
 
 See also:
-	- https://reactivex.io/
-	- https://pypi.org/project/reactivex/
-	- https://snyk.io/advisor/python/reactivex
-	- https://github.com/ReactiveX/RxPY
-	- https://martinfowler.com/articles/collection-pipeline
+- https://reactivex.io/
+- https://pypi.org/project/reactivex/
+- https://snyk.io/advisor/python/reactivex
+- https://github.com/ReactiveX/RxPY
+- https://martinfowler.com/articles/collection-pipeline
