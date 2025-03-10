@@ -1,6 +1,9 @@
 """
 Future and Promise
 
+The *Future and Promise* pattern allows applications to remain responsive and efficient
+by not blocking the main thread with long-running tasks.
+
 In the asynchronous programming paradigm, a *Future* object is immediately returned
 and acts as a placeholder for the actual result available later.
 Thus, the program continues executing other tasks rather than waiting for the operation to be completed.
@@ -20,7 +23,7 @@ Internally, the asynchronous function creates a Promise object.
 - During the *execution* step, the operation proceeds independently of the main program flow.
 This allows the program to remain responsive and continue with other tasks.
 
-- The nex one is the *resolution* step. If the operation is successful, the Promise is fulfilled with the result.
+- The next one is the *resolution* step. If the operation is successful, the Promise is fulfilled with the result.
 If the operation fails, the Promise is rejected with an error.
 The fulfillment or rejection of the Promise resolves the Future.
 """

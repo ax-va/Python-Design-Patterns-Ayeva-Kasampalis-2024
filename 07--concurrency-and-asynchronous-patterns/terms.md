@@ -13,24 +13,20 @@ smaller, manageable units of work, called *workers*, that can be processed in pa
 The workers could be threads within a single application, separate processes on the same machine, 
 or even different machines in a distributed system.
 
+While the Thread Pool pattern focuses on reusing a fixed number of threads to execute tasks, 
+the Worker Model pattern is more about the dynamic distribution of tasks across potentially scalable 
+and flexible worker entities.
+
 Three components are involved in this pattern:
 
 - The *workers* that can perform a piece of the task independently of each other;
 - The *task queue* where tasks are stored awaiting processing;
 - The *dispatcher* / *master* / *boss thread* that assigns tasks to workers based on availability, load, or priority.
 
-### Thread Pool vs. Worker Model
-
-- The Thread Pool pattern emphasizes efficient thread management and reuse, 
-while the Worker Model pattern centers on the delegation relationship between a master thread and worker threads.
-
-- In the Thread Pool pattern, tasks are typically placed into a queue and picked up by any available thread. 
-In contrast, the Worker Model pattern involves a boss explicitly assigning tasks to specific worker threads.
-
-- The Thread Pool pattern is ideal for scenarios with numerous short-lived tasks requiring efficient thread management. 
-The Worker Model pattern suits situations where tasks are dynamic, require specific handling, or involve complex coordination.
-
 ### Future and Promise
+
+The *Future and Promise* pattern allows applications to remain responsive and efficient 
+by not blocking the main thread with long-running tasks.
 
 In the asynchronous programming paradigm, a *Future* object is immediately returned 
 and acts as a placeholder for the actual result available later.
@@ -51,7 +47,7 @@ Internally, the asynchronous function creates a Promise object.
 - During the *execution* step, the operation proceeds independently of the main program flow. 
 This allows the program to remain responsive and continue with other tasks.
 
-- The nex one is the *resolution* step. If the operation is successful, the Promise is fulfilled with the result. 
+- The next one is the *resolution* step. If the operation is successful, the Promise is fulfilled with the result. 
 If the operation fails, the Promise is rejected with an error.
 The fulfillment or rejection of the Promise resolves the Future.
 
@@ -61,3 +57,25 @@ To put it simply, the concept of *reactive programming* is
 to react to many events (streams of events) while keeping the code clean,
 This concept, added to the traditional Observer pattern, 
 creates the *Observer* pattern *in reactive programming*.
+
+## Other Patterns
+
+### Actor Model
+
+The *Actor Model* defines some rules for how actor instances should behave. 
+For example, an actor can make local decisions, create more actors, send more messages, 
+and determine how to respond to the next message received.
+
+### Coroutines
+
+*Coroutines* are general control structures 
+where flow control is cooperatively passed between two different routines without returning.
+
+### Message Passing
+
+Software entities communicate and coordinate their actions by passing messages to each other.
+
+### Backpressure
+
+*Backpressure* is a mechanism to manage the flow of data through software systems and prevent overwhelming components. 
+It allows systems to gracefully handle overload by signaling the producer to slow down until the consumer can catch up.
