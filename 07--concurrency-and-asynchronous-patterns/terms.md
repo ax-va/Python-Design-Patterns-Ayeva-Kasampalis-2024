@@ -63,7 +63,7 @@ creates the *Observer* pattern *in reactive programming*.
 ### Actor Model
 
 The *Actor Model* defines some rules for how actor instances should behave. 
-For example, an actor can make local decisions, create more actors, send more messages, 
+An actor can make local decisions, create more actors, send more messages, 
 and determine how to respond to the next message received.
 
 ### Coroutines
