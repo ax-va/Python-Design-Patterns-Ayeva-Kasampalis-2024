@@ -23,7 +23,7 @@ reducing the need to fetch data from the data store repeatedly.
     Status: Downloaded newer image for redis:latest
     docker.io/library/redis:latest
     ```
-  
+
 - Start the Redis server running in a Docker container:
     ```unix
     $ docker run --name myredis -p 6379:6379 redis
@@ -32,7 +32,7 @@ reducing the need to fetch data from the data store repeatedly.
     1:M 12 Mar 2025 21:17:51.713 * Server initialized
     1:M 12 Mar 2025 21:17:51.713 * Ready to accept connections tcp
     ```
-  
+
 - Stop the Redis server running in Docker:
   ```unix
   $ docker ps
@@ -59,7 +59,7 @@ reducing the need to fetch data from the data store repeatedly.
   - https://pypi.org/project/Faker/
   - https://github.com/joke2k/faker
   - https://snyk.io/advisor/python/faker
-  
+
   ```unix
   $ pip install Faker
   ```
