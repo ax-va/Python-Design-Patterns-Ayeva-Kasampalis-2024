@@ -14,7 +14,7 @@ reducing the need to fetch data from the data store repeatedly.
     $ docker --version
     Docker version 28.0.0, build f9ced58
     ```
-    For more details, see `06*/06-3*/README.md`.
+    See `06*/06-3*/README.md` for more details.
 
 - Pull the official Redis image from Docker Hub:
     ```unix
@@ -24,7 +24,7 @@ reducing the need to fetch data from the data store repeatedly.
     docker.io/library/redis:latest
     ```
   
-- Start the Redis server as a Docker container:
+- Start the Redis server running in a Docker container:
     ```unix
     $ docker run --name myredis -p 6379:6379 redis
     ...
@@ -32,8 +32,17 @@ reducing the need to fetch data from the data store repeatedly.
     1:M 12 Mar 2025 21:17:51.713 * Server initialized
     1:M 12 Mar 2025 21:17:51.713 * Ready to accept connections tcp
     ```
+  
+- Stop the Redis server running in Docker:
+  ```unix
+  $ docker ps
+  CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS        PORTS                                         NAMES
+  22ea356f239c   redis     "docker-entrypoint.s…"   21 hours ago   Up 21 hours   0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp   myredis
+  $ docker stop 22ea356f239c
+  22ea356f239c
+  ```
 
-- Install the Python's **redis-py** package:
+- Install the Python's client for Redis, the **redis-py** package:
 
     - https://pypi.org/project/redis/
     - https://github.com/redis/redis-py
@@ -41,3 +50,13 @@ reducing the need to fetch data from the data store repeatedly.
     ```unix
     $ pip install redis
     ```
+  
+### Faker
+
+- Faker is used for generating fake quotes that will populate the database:
+  - https://pypi.org/project/Faker/
+  - https://github.com/joke2k/faker
+  - https://snyk.io/advisor/python/faker
+  ```unix
+  $ pip install Faker
+  ```
