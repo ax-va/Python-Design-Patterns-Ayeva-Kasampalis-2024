@@ -47,6 +47,7 @@ reducing the need to fetch data from the data store repeatedly.
     - https://pypi.org/project/redis/
     - https://github.com/redis/redis-py
     - https://snyk.io/advisor/python/redis
+    
     ```unix
     $ pip install redis
     ```
@@ -54,9 +55,11 @@ reducing the need to fetch data from the data store repeatedly.
 ### Faker
 
 - Faker is used for generating fake quotes that will populate the database:
+
   - https://pypi.org/project/Faker/
   - https://github.com/joke2k/faker
   - https://snyk.io/advisor/python/faker
+  
   ```unix
   $ pip install Faker
   ```
