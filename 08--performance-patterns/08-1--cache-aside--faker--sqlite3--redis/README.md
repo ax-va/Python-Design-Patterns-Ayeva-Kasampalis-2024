@@ -2,10 +2,11 @@
 
 ### Cache-Aside
 
-When data is more frequently read than updated, applications can use a cache
+When data is more frequently read than updated, applications can use a *cache*
 to optimize repeated access to information stored in a database or data store.
-In the Cache-Aside pattern, Cache-Aside, where, frequently accessed data is stored in a cache, 
+In the *Cache-Aside* pattern, frequently accessed data is stored in a cache, 
 reducing the need to fetch data from the data store repeatedly.
+The cached data usually exist for a relatively short period of time.
 
 ### Redis
 
