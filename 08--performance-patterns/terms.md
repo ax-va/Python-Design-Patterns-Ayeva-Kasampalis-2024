@@ -15,3 +15,6 @@ to avoid repetitive and costly computations, significantly reducing execution ti
 This pattern is used if a function is called with the same inputs more than once.
 
 ### Lazy Loading
+
+The *Lazy Loading* pattern is used to defer the initialization or loading of resources 
+until they are actually needed.
