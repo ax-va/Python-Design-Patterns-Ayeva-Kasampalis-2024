@@ -10,9 +10,9 @@ The cached data usually exist for a relatively short period of time.
 
 ### Memoization
 
-In the *Memoization* pattern, the results of expensive function calls are cached
-to avoid repetitive and costly computations, significantly reducing execution time.
-This pattern is used if a function is called with the same inputs more than once.
+The *Memoization* pattern is used if a function is called with the same inputs more than once.
+Results of expensive function calls are cached to avoid repetitive and costly computations, 
+significantly reducing execution time.
 
 ### Lazy Loading
 
