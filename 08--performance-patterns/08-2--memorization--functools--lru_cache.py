@@ -1,7 +1,9 @@
 """
-In the *Memoization* pattern, the results of expensive function calls are cached
-to avoid repetitive and costly computations, significantly reducing execution time.
-This pattern is used if a function is called with the same inputs more than once.
+Memoization
+
+The *Memoization* pattern is used if a function is called with the same inputs more than once.
+Results of expensive function calls are cached to avoid repetitive and costly computations, 
+significantly reducing execution time.
 """
 from functools import lru_cache
 
