@@ -18,6 +18,8 @@ def fibonacci_func1(n):
 @lru_cache(maxsize=None)
 def fibonacci_func2(n):
 	return fibonacci_func1(n)
+# If the function is called again with the same arguments,
+# the result is retrieved from the cache instead of being recalculated.
 
 
 def main():
