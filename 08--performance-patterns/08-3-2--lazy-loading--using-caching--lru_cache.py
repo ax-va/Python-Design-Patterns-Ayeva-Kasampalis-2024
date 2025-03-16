@@ -21,6 +21,8 @@ def recursive_factorial(n):
 @lru_cache(maxsize=128)
 def cached_factorial(n):
 	return recursive_factorial(n)
+# The difference from memoization is the context in which caching is used,
+# in this example for managing resource initialization.
 
 
 def main():
