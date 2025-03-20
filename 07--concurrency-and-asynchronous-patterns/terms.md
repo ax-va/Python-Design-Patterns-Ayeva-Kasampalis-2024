@@ -58,22 +58,23 @@ to react to many events (streams of events) while keeping the code clean,
 This concept, added to the traditional Observer pattern, 
 creates the *Observer* pattern *in reactive programming*.
 
-## Other Patterns
+## Other Concurrency and Asynchronous Patterns
 
 ### Actor Model
 
-The *Actor Model* defines some rules for how actor instances should behave. 
-An actor can make local decisions, create more actors, send more messages, 
-and determine how to respond to the next message received.
+The *Actor Model* pattern treats "actors" as the fundamental units of computation, 
+where each actor encapsulates its state and behavior, communicates exclusively through asynchronous message passing, 
+and processes messages one at a time. 
 
 ### Coroutines
 
-*Coroutines* are general control structures 
-where flow control is cooperatively passed between two different routines without returning.
+*Coroutines* are general control structures that allow control flow to be cooperatively passed 
+between multiple routines without returning, enabling them to pause (yield) and resume execution.
 
 ### Message Passing
 
-Software entities communicate and coordinate their actions by passing messages to each other.
+The *Message Passing* pattern enables communication between components or processes by sending discrete messages, 
+rather than sharing memory. This decouples the sender and receiver.
 
 ### Backpressure
 

@@ -77,23 +77,25 @@ by redefining certain parts of an algorithm without changing its structure.
 *Invariant* (common) parts of algorithms are kept in a template method/function, and 
 *variant* (different) parts are moved in action/hook methods/functions.
 
-## Other Patterns 
+## Other Behavioral Design Patterns 
 
-Behavioral design patterns that are not commonly used by Python developers:
+Behavioral design patterns that are *not commonly* used by Python developers:
 
 ### Mediator
 
-In the *Mediator* pattern, objects don't communicate directly with each other; 
-instead, they communicate through a *mediator* object 
-that acts as a central hub for coordinating communication between the objects.
+The *Mediator* pattern centralizes communication between multiple components 
+by introducing a *mediator* object that handles their interactions, reducing direct dependencies.
 
 In Python, you can use event-driven programming with a library such as `asyncio` 
 instead of communication between objects through a mediator object.
 
 ### Visitor
 
-For complex use cases, the *Visitor* pattern provides a solution 
-for separating algorithms from the objects on which they operate.
+The *Visitor* pattern allows adding new operations to existing object structures 
+without modifying their classes by separating the operation logic into a *visitor* object. 
+Each element in the structure accepts the visitor, 
+enabling the visitor to perform specific actions based on the element's type.
+This pattern provides a solution for separating algorithms from the objects, on which they operate.
 
 In Python, using functions as first-class citizens, decorators, or context managers 
 can provide ways to encapsulate algorithms and operations without the need for explicit visitor objects.

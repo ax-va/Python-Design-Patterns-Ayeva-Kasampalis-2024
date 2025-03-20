@@ -51,13 +51,16 @@ Every time something changes (an event), it makes a record of it.
 
 ### Event-Driven Architecture (EDA)
 
-This pattern emphasizes the production, detection, consumption of, and reaction to events.
+This pattern emphasizes the production, detection, consumption of events 
+to trigger communication and behavior within a system, and asynchronous reaction to events as they occur.
 
 ### Command Query Responsibility Segregation (CQRS)
 
-This pattern separates the models for reading and writing data.
+*Command and Query Responsibility Segregation (CQRS)* is a design pattern that separates 
+the responsibilities of reading data (queries) and writing data (commands) into distinct models. 
+This separation allows for optimized, scalable, and independently evolving read and write operations.
 
 ### Clean Architecture
 
-This pattern proposes a way to organize code such that it encapsulates the business logic 
-but keeps it separate from the interfaces through which the application is exposed to users or other systems.
+The *Clean Architecture* pattern organizes software systems into layers with clear separation of concerns, 
+placing business logic at the center and keeping it independent of frameworks, UI, and external systems.
