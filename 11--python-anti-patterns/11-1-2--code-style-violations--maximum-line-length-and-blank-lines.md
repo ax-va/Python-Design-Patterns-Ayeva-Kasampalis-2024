@@ -11,7 +11,7 @@
 - Method definitions inside a class should be separated by a single blank line.
 
 ```python
-# incorrect
+# not compliant with the style guide
 class MyClass1:
 	def method1(self):
 		pass
@@ -22,7 +22,7 @@ def top_level_function1():
 ```
 
 ```python
-# correct
+# compliant with the style guide
 class MyClass2:
 
 	def method1(self):
