@@ -31,7 +31,6 @@ class Counter:
 
 
 if __name__ == "__main__":
-	counter = Counter()
 
 
 	def foo():
@@ -41,6 +40,7 @@ if __name__ == "__main__":
 			counter.increment()
 
 
+	counter = Counter()
 	foo()
 	# Counter value: 0
 	# Counter value: 1
