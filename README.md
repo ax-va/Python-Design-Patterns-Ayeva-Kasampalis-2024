@@ -12,5 +12,5 @@ https://github.com/PacktPublishing/Mastering-Python-Design-Patterns-Third-Editio
 
 ## Motivation
 
-"Always remember - the best code is not just about making it work but also about making it work well. 
-Even more, ideally, it should be easy to maintain." - from this book.
+*"Always remember - the best code is not just about making it work but also about making it work well. 
+Even more, ideally, it should be easy to maintain."* - from this book.
