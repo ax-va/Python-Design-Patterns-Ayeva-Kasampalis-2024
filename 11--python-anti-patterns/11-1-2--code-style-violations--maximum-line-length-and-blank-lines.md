@@ -6,32 +6,30 @@
 
 - Limit code line length to a maximum of 79 characters, as recommended in the style guide.
 
-- Surround top-level function and class definitions with two blank lines.
+- How to surround top-level function and class definitions and method definitions inside a class:
 
-- Surround method definitions inside a class with a single blank line.
-
-```python
-# not compliant with the style guide
-class MyClass1:
-	def method1(self):
-		pass
-	def method2(self):
-		pass
-def top_level_function1():
-	pass
-```
-
-```python
-# compliant with the style guide
-class MyClass2:
-
-	def method1(self):
-		pass
-
-	def method2(self):
-		pass
-
-
-def top_level_function2():
-	pass
-```
+    ```python
+    # not compliant with the style guide
+    class MyClass:
+        def method1(self):
+            pass
+        def method2(self):
+            pass
+    def top_level_function():
+        pass
+    ```
+    
+    ```python
+    # How many blank lines are compliant with the style guide
+    class MyClass:
+        # 1
+        def method1(self):
+            pass
+        # 1
+        def method2(self):
+            pass
+    # 1
+    # 2
+    def top_level_function():
+        pass
+    ```
