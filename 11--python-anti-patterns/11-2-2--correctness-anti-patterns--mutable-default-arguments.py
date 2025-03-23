@@ -1,5 +1,6 @@
 """
-Use a default value of `None` and set it to a mutable data structure within the function if needed.
+Use a default value of `None` and set it to
+a mutable data structure within the function if needed.
 """
 
 
