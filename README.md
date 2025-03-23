@@ -7,6 +7,10 @@ writen by Kamon Ayeva and Sakis Kasampalis and published by *Packt Publishing* i
 They cover the most used and efficient design principles and patterns in the context of Python programming
 such as *SOLID*, *the Gang of Four (GoF)*, and many others.
 
+<p align="center">
+  <img src="/book.jpg" width="400" />
+</p>
+
 ## Original Repo
 
 https://github.com/PacktPublishing/Mastering-Python-Design-Patterns-Third-Edition
