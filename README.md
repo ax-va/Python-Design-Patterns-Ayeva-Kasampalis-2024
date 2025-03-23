@@ -3,8 +3,8 @@
 The examples, with some code changes and brief explanations, 
 are based on the book *"Mastering Python Design Patterns"*, Third Edition, 
 writen by Kamon Ayeva and Sakis Kasampalis and published by *Packt Publishing* in 2024. 
-They cover the most used and efficient design principles and patterns 
-such as *SOLID*, *the Gang of Four (GoF)*, and many others in the context of Python programming.
+They cover the most used and efficient design principles and patterns in the context of Python programming
+such as *SOLID*, *the Gang of Four (GoF)*, and many others.
 
 ## Original Repo
 
