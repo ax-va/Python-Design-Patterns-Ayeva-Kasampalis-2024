@@ -5,7 +5,7 @@ Use a default value of `None` and set it to a mutable data structure within the 
 
 # This bad practice leads to unexpected behavior:
 # `mylist` will be not reset to an empty list after the first call
-# with the default parameter, keeping the previous value.
+# with the default parameter, keeping its previous value.
 def manipulate_v1(mylist=[]):
 	mylist.append("test")
 	return mylist
