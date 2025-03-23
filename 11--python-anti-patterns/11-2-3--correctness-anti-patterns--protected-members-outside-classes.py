@@ -1,5 +1,7 @@
 """
-Don't use protected class' members outside their class.
+Don't call protected class' members outside their class
+because the developer can change the ones in the class' definition in the future.
+Encapsulate them in public methods instead.
 """
 
 class Book:
