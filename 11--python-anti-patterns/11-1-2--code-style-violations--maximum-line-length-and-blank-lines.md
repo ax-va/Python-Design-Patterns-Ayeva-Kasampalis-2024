@@ -6,9 +6,9 @@
 
 - Limit code line length to a maximum of 79 characters, as recommended in the style guide.
 
-- Separate top-level function and class definitions from the rest of your code with two blank lines.
+- Surround top-level function and class definitions with two blank lines.
 
-- Method definitions inside a class should be separated by a single blank line.
+- Surround method definitions inside a class should with a single blank line.
 
 ```python
 # not compliant with the style guide
