@@ -8,7 +8,7 @@
 
 - Surround top-level function and class definitions with two blank lines.
 
-- Surround method definitions inside a class should with a single blank line.
+- Surround method definitions inside a class with a single blank line.
 
 ```python
 # not compliant with the style guide
