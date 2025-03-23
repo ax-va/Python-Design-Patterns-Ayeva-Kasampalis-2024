@@ -12,7 +12,7 @@ def manipulate_v1(mylist=[]):
 	return mylist
 
 
-# better
+# recommended
 def manipulate_v2(mylist=None):
 	if mylist is None:
 		mylist = []
