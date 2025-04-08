@@ -14,20 +14,20 @@ from concurrent.futures import ThreadPoolExecutor
 
 
 def task(i):
-	""" This function simulates a task. """
-	print(f"Executing task {i} ...")
-	time.sleep(1)
-	print(f"Task {i} completed.")
+    """ This function simulates a task. """
+    print(f"Executing task {i} ...")
+    time.sleep(1)
+    print(f"Task {i} completed.")
 
 
 with ThreadPoolExecutor(max_workers=5) as executor:
-	# Submit 10 tasks to the thread pool
-	for j in range(10):
-		executor.submit(task, j)
-	# The tasks are executed concurrently
-	# using the threads available in the thread pool.
-	# Once a worker thread completes a task,
-	# it picks up another from the queue.
+    # Submit 10 tasks to the thread pool
+    for j in range(10):
+        executor.submit(task, j)
+    # The tasks are executed concurrently
+    # using the threads available in the thread pool.
+    # Once a worker thread completes a task,
+    # it picks up another from the queue.
 
 # Executing task 0 ...
 # Executing task 1 ...

@@ -28,45 +28,45 @@ import urllib.request
 
 
 class SingletonType(type):
-	""" Provides a metaclass for a singleton. """
-	_instances = {}
-	def __call__(cls, *args, **kwargs):
-		if cls not in cls._instances:
-			obj = super(SingletonType, cls).__call__(*args, **kwargs)
-			cls._instances[cls] = obj
-		return cls._instances[cls]
+    """ Provides a metaclass for a singleton. """
+    _instances = {}
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            obj = super(SingletonType, cls).__call__(*args, **kwargs)
+            cls._instances[cls] = obj
+        return cls._instances[cls]
 
 
 class URLFetcher(metaclass=SingletonType):
-	def __init__(self):
-		self.urls = []
+    def __init__(self):
+        self.urls = []
 
-	def fetch(self, url):
-		req = urllib.request.Request(url)
-		with urllib.request.urlopen(req) as response:
-			if response.code == 200:
-				page_content = response.read()
-				with open("data/content.html", "a") as f:
-					f.write(str(page_content) + "\n")
-				self.urls.append(url)
+    def fetch(self, url):
+        req = urllib.request.Request(url)
+        with urllib.request.urlopen(req) as response:
+            if response.code == 200:
+                page_content = response.read()
+                with open("data/content.html", "a") as f:
+                    f.write(str(page_content) + "\n")
+                self.urls.append(url)
 
 
 def main():
-	my_urls = [
-		"http://python.org",
-		"https://www.djangoproject.com/",
-	]
+    my_urls = [
+        "http://python.org",
+        "https://www.djangoproject.com/",
+    ]
 
-	print(URLFetcher() is URLFetcher())
+    print(URLFetcher() is URLFetcher())
 
-	fetcher = URLFetcher()
-	for url in my_urls:
-		fetcher.fetch(url)
+    fetcher = URLFetcher()
+    for url in my_urls:
+        fetcher.fetch(url)
 
-	print(f"Fetched URLs: {fetcher.urls}")
+    print(f"Fetched URLs: {fetcher.urls}")
 
 
 if __name__ == "__main__":
-	main()
-	# True
-	# Fetched URLs: ['http://python.org', 'https://www.djangoproject.com/']
+    main()
+    # True
+    # Fetched URLs: ['http://python.org', 'https://www.djangoproject.com/']

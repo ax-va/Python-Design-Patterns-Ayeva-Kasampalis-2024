@@ -21,17 +21,17 @@ router = OpenAIAPIRouter()
 
 @router.post("/chat")
 def chat(stream: bool = True) -> ChatCompletionResource:
-	system = "Here is your assistant"
-	return ChatCompletionResource(
-		model="gpt-4o",
-		stream=stream,
-		system=system,
-	)
+    system = "Here is your assistant"
+    return ChatCompletionResource(
+        model="gpt-4o",
+        stream=stream,
+        system=system,
+    )
 
 
 if __name__ == "__main__":
-	app.include_router(router)
-	uvicorn.run(app)
+    app.include_router(router)
+    uvicorn.run(app)
 
 """
 $ python llm_service.py

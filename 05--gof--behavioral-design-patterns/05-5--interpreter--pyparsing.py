@@ -63,26 +63,26 @@ print(dev_str)
 
 
 class Boiler:
-	def __init__(self):
-		self.temperature = 83  # in celsius
+    def __init__(self):
+        self.temperature = 83  # in celsius
 
-	def __str__(self):
-		return f"boiler temperature: {self.temperature}"
+    def __str__(self):
+        return f"boiler temperature: {self.temperature}"
 
-	def increase_temperature(self, amount):
-		print(f"increasing the boiler's temperature by {amount} degrees")
-		self.temperature += amount
+    def increase_temperature(self, amount):
+        print(f"increasing the boiler's temperature by {amount} degrees")
+        self.temperature += amount
 
-	def decrease_temperature(self, amount):
-		print(f"decreasing the boiler's temperature by {amount} degrees")
-		self.temperature -= amount
+    def decrease_temperature(self, amount):
+        print(f"decreasing the boiler's temperature by {amount} degrees")
+        self.temperature -= amount
 
 
 boiler = Boiler()
 
 if "increase" in cmd_str and "boiler" in dev_str:
-	boiler.increase_temperature(int(args[0]))
-	# increasing the boiler's temperature by 3 degrees
+    boiler.increase_temperature(int(args[0]))
+    # increasing the boiler's temperature by 3 degrees
 
 print(boiler)
 # boiler temperature: 86

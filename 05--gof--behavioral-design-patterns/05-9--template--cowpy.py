@@ -24,40 +24,40 @@ from cowpy import cow
 
 # template function
 def generate_banner(msg, style):
-	print("-- start of banner --")
-	print(style(msg))
-	print("-- end of banner --\n")
+    print("-- start of banner --")
+    print(style(msg))
+    print("-- end of banner --\n")
 
 
 # style function 1
 def dots_style(msg):
-	msg = msg.capitalize()
-	ten_dots = "." * 10
-	msg = f"{ten_dots}{msg}{ten_dots}"
-	return msg
+    msg = msg.capitalize()
+    ten_dots = "." * 10
+    msg = f"{ten_dots}{msg}{ten_dots}"
+    return msg
 
 
 # style function 2
 def admire_style(msg):
-	msg = msg.upper()
-	# Put an exclamation mark between each character of the text
-	msg = "!".join(msg)
-	return msg
+    msg = msg.upper()
+    # Put an exclamation mark between each character of the text
+    msg = "!".join(msg)
+    return msg
 
 # style function 3
 def cow_style(msg):
-	msg = cow.milk_random_cow(msg)
-	return msg
+    msg = cow.milk_random_cow(msg)
+    return msg
 
 
 def main():
-	styles = (dots_style, admire_style, cow_style)
-	msg = "happy coding"
-	[generate_banner(msg, style) for style in styles]
+    styles = (dots_style, admire_style, cow_style)
+    msg = "happy coding"
+    [generate_banner(msg, style) for style in styles]
 
 
 if __name__ == "__main__":
-	main()
+    main()
 """
 -- start of banner --
 ..........Happy coding..........

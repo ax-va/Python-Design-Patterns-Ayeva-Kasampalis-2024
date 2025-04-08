@@ -14,7 +14,7 @@ start_time = time.time()
 # not recommended
 result = ""
 for item in my_list:
-	result += f", {item}"
+    result += f", {item}"
 # ----------------------------------------
 stop_time = time.time()
 duration = timedelta(stop_time - start_time)

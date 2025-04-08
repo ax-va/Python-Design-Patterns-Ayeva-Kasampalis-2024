@@ -21,68 +21,68 @@ from typing import Protocol
 # that the resource is created on demand and only closed once all references to it are released.
 
 class DBConnectionInterface(Protocol):
-	def exec_query(self, query):
-		...
+    def exec_query(self, query):
+        ...
 
 
 class DBConnection:
-	def __init__(self):
-		print("DB connection created.")
+    def __init__(self):
+        print("DB connection created.")
 
-	def exec_query(self, query):
-		return f"Executing query: '{query}'."
+    def exec_query(self, query):
+        return f"Executing query: '{query}'."
 
-	def close(self):
-		print("DB connection closed.")
+    def close(self):
+        print("DB connection closed.")
 
 
 class SmartProxy:
-	def __init__(self):
-		self.conn = None
-		self.ref_count = 0
+    def __init__(self):
+        self.conn = None
+        self.ref_count = 0
 
-	def access_resource(self):
-		if self.conn is None:
-			self.conn = DBConnection()
-		self.ref_count += 1
-		print(f"DB connection now has {self.ref_count} references.")
+    def access_resource(self):
+        if self.conn is None:
+            self.conn = DBConnection()
+        self.ref_count += 1
+        print(f"DB connection now has {self.ref_count} references.")
 
-	def exec_query(self, query):
-		if self.conn is None:
-			# Ensure the connection is created if not already
-			self.access_resource()
-		result = self.conn.exec_query(query)
-		print(result)
+    def exec_query(self, query):
+        if self.conn is None:
+            # Ensure the connection is created if not already
+            self.access_resource()
+        result = self.conn.exec_query(query)
+        print(result)
 
-		# Decrement reference count after
-		self.release_resource()
+        # Decrement reference count after
+        self.release_resource()
 
-		return result
+        return result
 
-	def release_resource(self):
-		if self.ref_count > 0:
-			self.ref_count -= 1
-			print("Reference released...")
-			print(f"{self.ref_count} remaining references.")
+    def release_resource(self):
+        if self.ref_count > 0:
+            self.ref_count -= 1
+            print("Reference released...")
+            print(f"{self.ref_count} remaining references.")
 
-		if self.ref_count == 0 and self.conn is not None:
-			self.conn.close()
-			self.conn = None
+        if self.ref_count == 0 and self.conn is not None:
+            self.conn.close()
+            self.conn = None
 
 
 if __name__ == "__main__":
-	proxy = SmartProxy()
-	proxy.exec_query("SELECT * FROM users")
-	# DB connection created.
-	# DB connection now has 1 references.
-	# Executing query: 'SELECT * FROM users'.
-	# Reference released...
-	# 0 remaining references.
-	# DB connection closed.
-	proxy.exec_query("UPDATE users SET name = 'John Doe' WHERE id = 1")
-	# DB connection created.
-	# DB connection now has 1 references.
-	# Executing query: 'UPDATE users SET name = 'John Doe' WHERE id = 1'.
-	# Reference released...
-	# 0 remaining references.
-	# DB connection closed.
+    proxy = SmartProxy()
+    proxy.exec_query("SELECT * FROM users")
+    # DB connection created.
+    # DB connection now has 1 references.
+    # Executing query: 'SELECT * FROM users'.
+    # Reference released...
+    # 0 remaining references.
+    # DB connection closed.
+    proxy.exec_query("UPDATE users SET name = 'John Doe' WHERE id = 1")
+    # DB connection created.
+    # DB connection now has 1 references.
+    # Executing query: 'UPDATE users SET name = 'John Doe' WHERE id = 1'.
+    # Reference released...
+    # 0 remaining references.
+    # DB connection closed.

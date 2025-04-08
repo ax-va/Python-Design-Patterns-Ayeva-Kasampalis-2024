@@ -7,16 +7,16 @@ and combine them to achieve the desired behavior.
 
 # not recommended
 class GrandParent:
-	pass
+    pass
 
 class Parent(GrandParent):
-	pass
+    pass
 
 class Child(Parent):
-	pass
+    pass
 
 
 # Favor composition over inheritance
 class Member:
-	def __init__(self, parent=None):
-		self.parent = parent
+    def __init__(self, parent=None):
+        self.parent = parent

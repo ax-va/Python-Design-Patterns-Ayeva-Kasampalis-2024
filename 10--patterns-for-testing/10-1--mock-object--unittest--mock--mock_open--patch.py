@@ -60,32 +60,32 @@ from unittest.mock import mock_open, patch
 # Example: mocking the file-writing mechanism for logging
 
 class Logger:
-	""" Represents a simple logger to write messages to a file. """
-	def __init__(self, filepath):
-		self.filepath = filepath
+    """ Represents a simple logger to write messages to a file. """
+    def __init__(self, filepath):
+        self.filepath = filepath
 
-	def log(self, message):
-		with open(self.filepath, "a") as file:
-			file.write(f"{message}\n")
+    def log(self, message):
+        with open(self.filepath, "a") as file:
+            file.write(f"{message}\n")
 
 
 class TestLogger(unittest.TestCase):
-	def test_log(self):
-		msg = "Hello, logging world!"
-		# Mock the Python built-in `open` function by using `unittest.mock.patch`,
-		# in the scope of which the target object, `builtins.open`, will be
-		# temporarily replaced with a mock object, `mock_open()`.
-		m_open = mock_open()
-		with patch("builtins.open", m_open):
-			logger = Logger("dummy.log")
-			logger.log(msg)
-			# Check whether the `open` function was called with the expected parameters
-			m_open.assert_called_once_with("dummy.log", "a")
-			# Obtain a new file handle by calling `m_open()`, and then use
-			# `assert_called_once_with()` on the `write()` method call on that file handle
-			# to check if the `write` method was called with the correct message.
-			m_open().write.assert_called_once_with(f"{msg}\n")
+    def test_log(self):
+        msg = "Hello, logging world!"
+        # Mock the Python built-in `open` function by using `unittest.mock.patch`,
+        # in the scope of which the target object, `builtins.open`, will be
+        # temporarily replaced with a mock object, `mock_open()`.
+        m_open = mock_open()
+        with patch("builtins.open", m_open):
+            logger = Logger("dummy.log")
+            logger.log(msg)
+            # Check whether the `open` function was called with the expected parameters
+            m_open.assert_called_once_with("dummy.log", "a")
+            # Obtain a new file handle by calling `m_open()`, and then use
+            # `assert_called_once_with()` on the `write()` method call on that file handle
+            # to check if the `write` method was called with the correct message.
+            m_open().write.assert_called_once_with(f"{msg}\n")
 
 
 if __name__ == "__main__":
-	unittest.main()
+    unittest.main()

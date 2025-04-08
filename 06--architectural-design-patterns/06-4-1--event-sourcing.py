@@ -18,42 +18,42 @@ Every time something changes (an event), it makes a record of it.
 
 # This class acts as the *aggregate*
 class Account:
-	def __init__(self):
-		self.balance = 0
-		# *event store*
-		self.events = []
+    def __init__(self):
+        self.balance = 0
+        # *event store*
+        self.events = []
 
-	def apply_event(self, event):
-		event["balance_before"] = self.balance
-		if event["type"] == "deposited":
-			self.balance += event["amount"]
-		elif event["type"] == "withdrawn":
-			self.balance -= event["amount"]
-		event["balance_after"] = self.balance
-		self.events.append(event)
+    def apply_event(self, event):
+        event["balance_before"] = self.balance
+        if event["type"] == "deposited":
+            self.balance += event["amount"]
+        elif event["type"] == "withdrawn":
+            self.balance -= event["amount"]
+        event["balance_after"] = self.balance
+        self.events.append(event)
 
-	def deposit(self, amount):
-		event = {"type": "deposited", "amount": amount}
-		self.apply_event(event)
+    def deposit(self, amount):
+        event = {"type": "deposited", "amount": amount}
+        self.apply_event(event)
 
-	def withdraw(self, amount):
-		event = {"type": "withdrawn", "amount": amount}
-		self.apply_event(event)
+    def withdraw(self, amount):
+        event = {"type": "withdrawn", "amount": amount}
+        self.apply_event(event)
 
 
 def main():
-	account = Account()
-	account.deposit(100)
-	account.deposit(50)
-	account.withdraw(100)
-	account.deposit(25)
-	for event in account.events:
-		print(event)
+    account = Account()
+    account.deposit(100)
+    account.deposit(50)
+    account.withdraw(100)
+    account.deposit(25)
+    for event in account.events:
+        print(event)
 
 
 if __name__ == "__main__":
-	main()
-	# {'type': 'deposited', 'amount': 100, 'balance_before': 0, 'balance_after': 100}
-	# {'type': 'deposited', 'amount': 50, 'balance_before': 100, 'balance_after': 150}
-	# {'type': 'withdrawn', 'amount': 100, 'balance_before': 150, 'balance_after': 50}
-	# {'type': 'deposited', 'amount': 25, 'balance_before': 50, 'balance_after': 75}
+    main()
+    # {'type': 'deposited', 'amount': 100, 'balance_before': 0, 'balance_after': 100}
+    # {'type': 'deposited', 'amount': 50, 'balance_before': 100, 'balance_after': 150}
+    # {'type': 'withdrawn', 'amount': 100, 'balance_before': 150, 'balance_after': 50}
+    # {'type': 'deposited', 'amount': 25, 'balance_before': 50, 'balance_after': 75}

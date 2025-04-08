@@ -11,15 +11,15 @@ filename = "file.txt"
 
 # LBYL
 if os.path.exists(filename):
-	with open(filename) as f:
-		print(f.read())
+    with open(filename) as f:
+        print(f.read())
 else:
-	print("No file there.")
+    print("No file there.")
 
 
 # EAFP is recommended instead
 try:
-	with open(filename) as f:
-		print(f.read())
+    with open(filename) as f:
+        print(f.read())
 except FileNotFoundError:
-	print("No file there.")
+    print("No file there.")

@@ -31,27 +31,27 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 def division_of_ten(x):
-	return 10 / x
+    return 10 / x
 
 
 def main():
-	with ThreadPoolExecutor() as executor:
-		futures = [
-			executor.submit(division_of_ten, i)
-			for i in (1, 2, 0, 5, 10)
-		]
-		# Iterate over completed Future objects and retrieve their results
-		for future in as_completed(futures):
-			try:
-				print(f"Promise fulfilled: {future.result()}")
-			except Exception as e:
-				print(f"Promise rejected: {e}")
+    with ThreadPoolExecutor() as executor:
+        futures = [
+            executor.submit(division_of_ten, i)
+            for i in (1, 2, 0, 5, 10)
+        ]
+        # Iterate over completed Future objects and retrieve their results
+        for future in as_completed(futures):
+            try:
+                print(f"Promise fulfilled: {future.result()}")
+            except Exception as e:
+                print(f"Promise rejected: {e}")
 
 
 if __name__ == "__main__":
-	main()
-	# Promise fulfilled: 5.0
-	# Promise rejected: division by zero
-	# Promise fulfilled: 10.0
-	# Promise fulfilled: 2.0
-	# Promise fulfilled: 1.0
+    main()
+    # Promise fulfilled: 5.0
+    # Promise rejected: division by zero
+    # Promise fulfilled: 10.0
+    # Promise fulfilled: 2.0
+    # Promise fulfilled: 1.0

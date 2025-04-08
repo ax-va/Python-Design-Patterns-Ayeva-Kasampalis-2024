@@ -11,57 +11,57 @@ from functools import lru_cache
 
 # without memorization
 def fibonacci_func1(n):
-	if n < 2:
-		return n
-	return fibonacci_func1(n - 1) + fibonacci_func1(n - 2)
+    if n < 2:
+        return n
+    return fibonacci_func1(n - 1) + fibonacci_func1(n - 2)
 
 
 # with memorization
 @lru_cache(maxsize=None)
 def fibonacci_func2(n):
-	return fibonacci_func1(n)
+    return fibonacci_func1(n)
 # If the function is called again with the same arguments,
 # the result is retrieved from the cache instead of being recalculated.
 
 
 def main():
-	import time
-	from datetime import timedelta
+    import time
+    from datetime import timedelta
 
-	n = 30
+    n = 30
 
-	# without memorization
-	start_time = time.time()
-	result = fibonacci_func1(n)
-	stop_time = time.time()
-	duration = timedelta(stop_time - start_time)
-	print(f"fibonacci_func1({n}) = {result}, calculated in {duration} for the first time")
+    # without memorization
+    start_time = time.time()
+    result = fibonacci_func1(n)
+    stop_time = time.time()
+    duration = timedelta(stop_time - start_time)
+    print(f"fibonacci_func1({n}) = {result}, calculated in {duration} for the first time")
 
-	# without memorization
-	start_time = time.time()
-	result = fibonacci_func1(n)
-	stop_time = time.time()
-	duration = timedelta(stop_time - start_time)
-	print(f"fibonacci_func1({n}) = {result}, calculated in {duration} for the second time")
+    # without memorization
+    start_time = time.time()
+    result = fibonacci_func1(n)
+    stop_time = time.time()
+    duration = timedelta(stop_time - start_time)
+    print(f"fibonacci_func1({n}) = {result}, calculated in {duration} for the second time")
 
-	# with memorization
-	start_time = time.time()
-	result = fibonacci_func2(n)
-	stop_time = time.time()
-	duration = timedelta(stop_time - start_time)
-	print(f"fibonacci_func2({n}) = {result}, calculated in {duration} for the first time")
+    # with memorization
+    start_time = time.time()
+    result = fibonacci_func2(n)
+    stop_time = time.time()
+    duration = timedelta(stop_time - start_time)
+    print(f"fibonacci_func2({n}) = {result}, calculated in {duration} for the first time")
 
-	# with memorization
-	start_time = time.time()
-	result = fibonacci_func2(n)
-	stop_time = time.time()
-	duration = timedelta(stop_time - start_time)
-	print(f"fibonacci_func2({n}) = {result}, calculated in {duration} for the second time")
+    # with memorization
+    start_time = time.time()
+    result = fibonacci_func2(n)
+    stop_time = time.time()
+    duration = timedelta(stop_time - start_time)
+    print(f"fibonacci_func2({n}) = {result}, calculated in {duration} for the second time")
 
 
 if __name__ == "__main__":
-	main()
-	# fibonacci_func1(30) = 832040, calculated in 2:19:09.561310 for the first time
-	# fibonacci_func1(30) = 832040, calculated in 2:20:37.149811 for the second time
-	# fibonacci_func2(30) = 832040, calculated in 2:20:34.142303 for the first time
-	# fibonacci_func2(30) = 832040, calculated in 0:00:00.617981 for the second time
+    main()
+    # fibonacci_func1(30) = 832040, calculated in 2:19:09.561310 for the first time
+    # fibonacci_func1(30) = 832040, calculated in 2:20:37.149811 for the second time
+    # fibonacci_func2(30) = 832040, calculated in 2:20:34.142303 for the first time
+    # fibonacci_func2(30) = 832040, calculated in 0:00:00.617981 for the second time
