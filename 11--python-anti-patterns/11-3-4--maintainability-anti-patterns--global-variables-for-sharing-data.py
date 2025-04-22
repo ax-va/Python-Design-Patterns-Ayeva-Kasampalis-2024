@@ -1,7 +1,8 @@
 """
-Avoid global variables for sharing data.
+Avoid global variables for sharing data. 
 Otherwise, you get bugs 
-if different parts of the application unexpectedly modify global state.
+if different parts of the application 
+unexpectedly modify global state.
 """
 
 # not recommended
