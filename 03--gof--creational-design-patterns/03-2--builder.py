@@ -4,8 +4,8 @@ Builder
 The *Builder* pattern separates the construction of a complex object from its representation,
 so that the same construction can be used to create several different representations.
 
-A Factory pattern creates an object in a single step, whereas a Builder
-pattern creates an object in multiple steps and almost always uses a *director*.
+A Factory pattern creates an object in a single step, whereas a Builder pattern 
+creates an object in multiple steps and almost always uses a *director*.
 """
 import time
 from enum import Enum
