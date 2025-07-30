@@ -25,7 +25,7 @@ class SmsSenderStub:
         self.messages_sent.append(message)
 
 
-class TestNotifService(unittest.TestCase):
+class TestNotificationService(unittest.TestCase):
     def test_notify_with_email(self):
         email_stub = EmailSenderStub()
         service = NotificationService()
