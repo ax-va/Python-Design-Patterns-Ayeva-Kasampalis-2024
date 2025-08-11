@@ -35,7 +35,7 @@ def division_of_ten(x):
 
 
 def main():
-    with ThreadPoolExecutor(max_workers=64) as executor:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         futures = [
             executor.submit(division_of_ten, i)
             for i in (1, 2, 0, 5, 10)
