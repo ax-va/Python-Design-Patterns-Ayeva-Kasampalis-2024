@@ -68,7 +68,7 @@ async def main_v2():
 
 
 if __name__ == "__main__":
-    # Run event loop
+    # Run event loops
     asyncio.run(main_v1())
     # Promise fulfilled: 1 -> 10.0
     # Promise fulfilled: 2 -> 5.0
