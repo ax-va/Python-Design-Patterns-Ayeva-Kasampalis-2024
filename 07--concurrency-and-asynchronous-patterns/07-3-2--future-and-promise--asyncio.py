@@ -39,7 +39,7 @@ async def division_of_ten(x):
 
 async def main_v1():
     inputs = (1, 2, 0, 5, 10)
-    coroutines = [asyncio.ensure_future(division_of_ten(x)) for x in inputs]
+    coroutines = [division_of_ten(x) for x in inputs]
     # Keep the input order and don't throw, but return exceptions
     results = await asyncio.gather(*coroutines, return_exceptions=True)
     for x, result in zip(inputs, results):
