@@ -44,18 +44,19 @@ async def main():
     ]
     # Use coroutine to wait for the Futures to complete and gather the results
     results = await asyncio.gather(*futures, return_exceptions=True)
-    for result in results:
+    for i, result in enumerate(results):
         if isinstance(result, Exception):
-            print(f"Promise rejected: {result}")
+            print(f"{i} - Promise rejected: {result}")
+
         else:
-            print(f"Promise fulfilled: {result}")
+            print(f"{i} - Promise fulfilled: {result}")
 
 
 if __name__ == "__main__":
     # Run `asyncio`'s event loop
     asyncio.run(main())
-    # Promise fulfilled: 10.0
-    # Promise fulfilled: 5.0
-    # Promise rejected: division by zero
-    # Promise fulfilled: 2.0
-    # Promise fulfilled: 1.0
+    # 0 - Promise fulfilled: 10.0
+    # 1 - Promise fulfilled: 5.0
+    # 2 - Promise rejected: division by zero
+    # 3 - Promise fulfilled: 2.0
+    # 4 - Promise fulfilled: 1.0
