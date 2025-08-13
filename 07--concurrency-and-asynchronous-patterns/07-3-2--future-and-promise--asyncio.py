@@ -37,26 +37,47 @@ async def division_of_ten(x):
     return 10 / x
 
 
-async def main():
-    futures = [
-        asyncio.ensure_future(division_of_ten(i))
-        for i in (1, 2, 0, 5, 10)
-    ]
-    # Use coroutine to wait for the Futures to complete and gather the results
-    results = await asyncio.gather(*futures, return_exceptions=True)
-    for i, result in enumerate(results):
+async def main_v1():
+    inputs = (1, 2, 0, 5, 10)
+    coroutines = [asyncio.ensure_future(division_of_ten(x)) for x in inputs]
+    # Keep the input order and don't throw, but return exceptions
+    results = await asyncio.gather(*coroutines, return_exceptions=True)
+    for x, result in zip(inputs, results):
         if isinstance(result, Exception):
-            print(f"{i} - Promise rejected: {result}")
+            print(f"Promise rejected: {x} -> {result}")
 
         else:
-            print(f"{i} - Promise fulfilled: {result}")
+            print(f"Promise fulfilled: {x} -> {result}")
+
+
+async def worker(x):
+    try:
+        # Results appear as soon as each task finishes
+        result = await division_of_ten(x)
+        print(f"Promise fulfilled: {x} -> {result}")
+
+    except Exception as e:
+        print(f"Promise rejected: {x} -> {e}")
+
+
+async def main_v2():
+    inputs = (1, 2, 0, 5, 10)
+    async with asyncio.TaskGroup() as tg:
+        for x in inputs:
+            tg.create_task(worker(x))
 
 
 if __name__ == "__main__":
-    # Run `asyncio`'s event loop
-    asyncio.run(main())
-    # 0 - Promise fulfilled: 10.0
-    # 1 - Promise fulfilled: 5.0
-    # 2 - Promise rejected: division by zero
-    # 3 - Promise fulfilled: 2.0
-    # 4 - Promise fulfilled: 1.0
+    # Run event loop
+    asyncio.run(main_v1())
+    # Promise fulfilled: 1 -> 10.0
+    # Promise fulfilled: 2 -> 5.0
+    # Promise rejected: 0 -> division by zero
+    # Promise fulfilled: 5 -> 2.0
+    # Promise fulfilled: 10 -> 1.0
+    asyncio.run(main_v2())
+    # Promise fulfilled: 1 -> 10.0
+    # Promise fulfilled: 2 -> 5.0
+    # Promise rejected: 0 -> division by zero
+    # Promise fulfilled: 5 -> 2.0
+    # Promise fulfilled: 10 -> 1.0
