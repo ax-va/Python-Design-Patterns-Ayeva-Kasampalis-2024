@@ -35,24 +35,24 @@ def division_of_ten(x):
 
 
 def main():
-    with ThreadPoolExecutor(max_workers=2) as executor:
+    with ThreadPoolExecutor(max_workers=5) as executor:
         futures = [
             executor.submit(division_of_ten, i)
             for i in (1, 2, 0, 5, 10)
         ]
         # Iterate over completed Future objects and retrieve their results
-        for future in as_completed(futures):
+        for i, future in enumerate(as_completed(futures)):
             try:
-                print(f"Promise fulfilled: {future.result()}")
+                print(f"{i} - Promise fulfilled: {future.result()}")
             
             except Exception as e:
-                print(f"Promise rejected: {e}")
+                print(f"{i} - Promise rejected: {e}")
 
 
 if __name__ == "__main__":
     main()
-    # Promise fulfilled: 5.0
-    # Promise rejected: division by zero
-    # Promise fulfilled: 10.0
-    # Promise fulfilled: 2.0
-    # Promise fulfilled: 1.0
+    # 0 - Promise fulfilled: 10.0
+    # 1 - Promise rejected: division by zero
+    # 2 - Promise fulfilled: 5.0
+    # 3 - Promise fulfilled: 2.0
+    # 4 - Promise fulfilled: 1.0
