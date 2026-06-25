@@ -7,28 +7,29 @@ from typing import Protocol
 
 
 # Example:
-# A `WeatherService` class depends on a `WeatherApiClientInterface` interface to fetch weather data.
+# A `WeatherService` class depends on a `WeatherApiClient` interface to fetch weather data.
 # We will inject a mock version of this API client.
 
 # Define the interface any weather API client implementation should conform to
 class WeatherApiClient(Protocol):
-    def fetch_weather(self, location: str):
+    def fetch_weather(self, location: str) -> str:
         """Fetch weather data for a given location"""
         ...
 
 
 # implementation of the interface
 class RealWeatherApiClient:
-    def fetch_weather(self, location: str):
+    def fetch_weather(self, location: str) -> str:
         # Perform a call to a weather service ...
         return f"Real weather data for {location}"
 
 
 class WeatherService:
+    # *structural typing*, or *duck typing*
     def __init__(self, weather_api: WeatherApiClient):
         self.weather_api = weather_api
 
-    def get_weather(self, location: str):
+    def get_weather(self, location: str) -> str:
         return self.weather_api.fetch_weather(location)
 
 

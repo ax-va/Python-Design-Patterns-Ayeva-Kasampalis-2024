@@ -21,6 +21,7 @@ can react accordingly, without being tightly bound to each other.
 # MessageService is loosely coupled with EmailSender and SMSSender through dependency injection.
 # We can easily switch between different sending mechanisms without modifying the MessageService class.
 class MessageService:
+    # constructor injection
     def __init__(self, sender):
         # A dependency is injected via "sender"
         self.sender = sender

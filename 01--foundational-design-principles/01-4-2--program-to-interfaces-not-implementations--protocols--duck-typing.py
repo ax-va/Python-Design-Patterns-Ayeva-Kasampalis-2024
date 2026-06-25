@@ -32,6 +32,7 @@ class FileLogger:
             f.write(f"File: {message}\n")
 
 
+# *structural typing*, or *duck typing*
 def log_message(logger: Logger, message: str):
     logger.log(message)
 
